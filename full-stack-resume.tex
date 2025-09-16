@@ -1,16 +1,15 @@
 \documentclass[10pt, letterpaper]{article}
 
-% Packages:
+% --- Packages ---
 \usepackage[
     ignoreheadfoot,
-    top=1 cm,
-    bottom=1 cm,
-    left=1.2 cm,
-    right=1.2 cm,
-    footskip=1.0 cm,
+    top=1cm,
+    bottom=1cm,
+    left=1.2cm,
+    right=1.2cm,
+    footskip=1cm,
 ]{geometry}
 \usepackage{titlesec}
-\usepackage{tabularx}
 \usepackage{array}
 \usepackage[dvipsnames]{xcolor}
 \definecolor{primaryColor}{RGB}{0, 0, 0}
@@ -24,235 +23,130 @@
     colorlinks=true,
     urlcolor=primaryColor
 ]{hyperref}
-\usepackage[pscoord]{eso-pic}
-\usepackage{calc}
-\usepackage{bookmark}
-\usepackage{lastpage}
+\usepackage{charter}
 \usepackage{changepage}
 \usepackage{paracol}
-\usepackage{ifthen}
-\usepackage{needspace}
-\usepackage{iftex}
 
-\ifPDFTeX
-    \input{glyphtounicode}
-    \pdfgentounicode=1
-    \usepackage[T1]{fontenc}
-    \usepackage[utf8]{inputenc}
-    \usepackage{lmodern}
-\fi
-
-\usepackage{charter}
-
+% --- Page setup ---
 \raggedright
-\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
 \pagestyle{empty}
 \setcounter{secnumdepth}{0}
-\setlength{\parindent}{0pt}
-\setlength{\topskip}{0pt}
-\setlength{\columnsep}{0.15cm}
 \pagenumbering{gobble}
 
-\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+% --- Section formatting ---
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.3cm}{0.2cm}
 
-\titlespacing{\section}{-1pt}{0.3 cm}{0.2 cm}
-
+% --- Lists ---
 \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
-\newenvironment{highlights}{\begin{itemize}[topsep=0.10 cm, parsep=0.10 cm, partopsep=0pt, itemsep=2pt, leftmargin=10pt]}{\end{itemize}}
-\newenvironment{onecolentry}{\begin{adjustwidth}{0 cm}{0 cm}}{\end{adjustwidth}}
-\newenvironment{twocolentry}[2][]{\onecolentry\def\secondColumn{#2}\setcolumnwidth{\fill, 4.5 cm}\begin{paracol}{2}}{\switchcolumn \raggedleft \secondColumn\end{paracol}\endonecolentry}
+\newenvironment{highlights}{\begin{itemize}[topsep=0.05cm,parsep=0.05cm,partopsep=0pt,itemsep=2pt,leftmargin=10pt]}{\end{itemize}}
+\newenvironment{onecolentry}{\begin{adjustwidth}{0cm}{0cm}}{\end{adjustwidth}}
 
 \begin{document}
 
-\newcommand{\AND}{\unskip\cleaders\copy\ANDbox\hskip\wd\ANDbox\ignorespaces}
-\newsavebox\ANDbox
-\sbox\ANDbox{$|$}
-
+% --- Header ---
 \begin{center}
-    {\fontsize{25 pt}{25 pt}\selectfont Harshwardhan Patil}
-
-    \vspace{10 pt}
-    \normalsize
-    \faMapMarker*\ Arlington, TX\hspace{1.2em}
-    \faEnvelope\ \href{mailto:work.harshwardhanpatil@gmail.com}{work.harshwardhanpatil@gmail.com}\hspace{1.2em}
-    \faPhone\ \href{tel:8179389288}{817-938-9288}\hspace{1.2em}
-    \faLinkedin\ \href{https://www.linkedin.com/in/harshwardhanpatil23/}{LinkedIn}\hspace{1.2em}
-    \faGithub\ \href{https://github.com/buffden}{GitHub}\hspace{1.2em}
+    {\fontsize{20pt}{20pt}\selectfont \textbf{Harshwardhan Patil}} \\[6pt]
+    \faMapMarker* Arlington, TX \hspace{1.2em}
+    \faEnvelope\ \href{mailto:work.harshwardhanpatil@gmail.com}{work.harshwardhanpatil@gmail.com} \hspace{1.2em}
+    \faPhone\ \href{tel:8179389288}{817-938-9288} \hspace{1.2em}
+    \faLinkedin\ \href{https://www.linkedin.com/in/harshwardhanpatil23/}{LinkedIn} \hspace{1.2em}
+    \faGithub\ \href{https://github.com/buffden}{GitHub} \hspace{1.2em}
     \faGlobe\ \href{https://buffden.github.io/buffden-portfolio/}{Portfolio}
 \end{center}
 
-\vspace{0.1 cm}
-\newcommand{\educationentry}[4]{%
-  \noindent\textbf{#1} \hfill \textit{#2}\\
-  \textit{#3} \\
-  #4
-}
+% --- Overview ---
 \section{Overview}
-\textbf{Full-Stack Developer} with 3+ years’ experience architecting reusable frontend modules, robust backend REST APIs, secure auth flows, and scalable cloud deployments. Proven track record in clean architecture, CI/CD automation, mentoring engineers, and delivering production-ready systems with zero downtime.
+Full-Stack Engineer with 3+ years’ experience designing and delivering \textbf{scalable, high-performance systems} across frontend, backend, and cloud. Skilled in modular architectures, database optimization, and CI/CD automation on AWS. Proven record of 50+ zero-rollback production releases, mentoring junior engineers, and aligning implementations with clean architecture and system design principles.
 
+% --- Education ---
 \section{Education}
-\educationentry
-    {University of Texas at Arlington}
-    {Expected May 2026}
-    {Master’s in Software Engineering}
-    {
-    \begin{highlights}
-        \item \textbf{Relevant Coursework:} System Design, Software Testing, Cloud Computing, AI/ML with Python, Distributed Systems
-        \end{highlights}
-    }
-    
+\textbf{University of Texas at Arlington} \hfill \textit{Expected May 2026} \\
+Master’s in Software Engineering
+\begin{highlights}
+  \item Coursework: System Design, Software Testing, Cloud Computing, AI/ML with Python, Distributed Systems
+\end{highlights}
+
+% --- Technical Skills ---
 \section{Technical Skills}
 \begin{onecolentry}
-    \item \textbf{Programming Languages}: TypeScript, JavaScript, Java, Python, SQL, Bash
-    \item \textbf{Frontend Development}: Angular (CLI, Material, RxJS), HTML5, CSS3, Responsive Design, Lazy Loading, Routing Guards, Component Reusability, D3.js
-    \item \textbf{Backend Development}: Spring Boot, Spring Security, Spring JDBC, Spring Data JPA, Node.js, Flask, RESTful API Design, Microservices, Database Migration (AWS Aurora), Apache Kafka (basic), DTO Pattern, JWT Authentication, Clean Architecture
-    \item \textbf{Architecture \& System Design}: System Design, High-Level Design (HLD), Low-Level Design (LLD), SOLID Principles, Domain-Driven Design (DDD), Event-Driven Architecture (EDA), Modular Monoliths, MVC, UML (Class, Sequence, Activity Diagrams)
-    \item \textbf{DevOps \& Cloud}: AWS (EC2, ECS, S3, RDS, Lambda, Aurora), Docker, Docker Compose, Kubernetes (basic), Jenkins, GitHub Actions, GitLab CI/CD, Spinnaker, Terraform, Nginx, Apache HTTP Server
-    \item \textbf{Databases \& Tools}: PostgreSQL, MySQL, MongoDB, Amazon DynamoDB, Redis, pgAdmin, DBeaver, MongoDB Compass
-    \item \textbf{Testing \& Debugging}: Jasmine, JUnit, PyTest, SonarQube, SonarQube Cloud, Postman Tests, Chrome Dev Tools
-    \item \textbf{Security \& Authentication}: Spring Security, JWT-based Authentication, OAuth 2.0 (basic), CORS, HTTPS, CSRF Protection, Role-Based Access Control (RBAC)
-    \item \textbf{Developer Tools}: Git, VS Code, IntelliJ IDEA, Jira, Postman, Notion, Figma, Draw.io, Mermaid AI
-    \item \textbf{CLI \& Productivity Tools}: Tmux, Vim, Zsh, CLI Debugging, Homebrew
-    \item \textbf{Collaboration \& Leadership}: Agile, Scrum, Sprint Planning, Mentoring, DevOps Advocacy, Technical Presentations, Documentation, Continuous Learning and Adaptability
+    \item \textbf{Languages:} TypeScript, JavaScript, Java, Python, SQL, C/C++
+    \item \textbf{Frontend:} Angular (CLI, Material, RxJS), D3.js, HTML5, CSS3, Responsive Design, Routing Guards, Component Reusability, ARIA
+    \item \textbf{Backend:} Spring Boot, Spring Security, Spring Data JPA, REST APIs, DTO Pattern, JWT Authentication, Clean Architecture
+    \item \textbf{Cloud \& DevOps:} AWS (EC2, ECS, S3, RDS, Lambda, Aurora), Docker, Jenkins, GitHub Actions, GitLab CI/CD, Spinnaker, Terraform, Nginx
+    \item \textbf{Databases:} PostgreSQL, MySQL, MongoDB, Redis
+    \item \textbf{Testing:} Jasmine, JUnit, PyTest, SonarQube, Postman
+    \item \textbf{Security:} JWT, CORS, HTTPS, CSRF, RBAC
+    \item \textbf{Collaboration:} Agile (Scrum, Sprint Planning), Mentoring
+    \item \textbf{Working Knowledge:} Apache Kafka, Kubernetes, DynamoDB
 \end{onecolentry}
 
-
-
-\newcommand{\experienceentry}[4]{%
-  \noindent\textbf{#1} \hfill \textit{#2}\\
-  \textit{#3} \\
-  #4
-  % \vspace{0.3cm}
-}
-
+% --- Professional Experience ---
 \section{Professional Experience}
 
-\experienceentry
-  {Software Engineer, Clarivate Analytics -- Bangalore, India}
-  {Aug 2023 -- Aug 2024}
-  {Full-Time}
-  {
-    \begin{highlights}
-        \item Engineered and delivered reusable Angular modules and Spring Boot REST APIs for dynamic tables, filters, charts, and export services, enabling end-to-end feature delivery with consistent performance and maintainability.
-        
-        \item Designed secure backend authentication flows using JWT and Spring Security, integrated with Angular routing guards for seamless session management and RBAC.
-        
-        \item Optimized PostgreSQL queries and schema design for heavy data reports, improving data retrieval speeds by 40\% and ensuring zero production downtime.
-        
-        \item Containerized full-stack applications with Docker, orchestrated CI/CD pipelines using Jenkins and Spinnaker, and deployed to AWS EC2/ECS for robust cloud scalability.
-        
-        \item Refactored legacy monolithic modules into modular reusable components aligned with Clean Architecture and Domain-Driven Design, reducing maintenance overhead.
-        
-        \item Wrote and maintained unit/integration tests using Jasmine for frontend and JUnit/Postman for backend, achieving 90\%+ test coverage and minimizing post-release defects.
-        
-        \item Mentored 2 junior engineers on full-stack best practices, including RESTful API design, frontend state management, and DevOps pipeline configurations.
-        
-        \item Owned 50+ production releases with zero rollbacks, leveraging automated deployment scripts, Terraform infrastructure as code, and clear release documentation.
-        
-        \item Collaborated cross-functionally to support feature enhancements, including tree filters, search result bookmarking, and large data exports for PPT/PDF using forkJoin and streaming APIs.
-    \end{highlights}
-  }
+\textbf{Software Engineer, Clarivate Analytics} -- Bangalore, India \hfill \textit{Aug 2023 -- Aug 2024} \\
+\begin{highlights}
+    \item Delivered reusable Angular modules and Spring Boot APIs for reporting, cutting duplicate code by 80\%.
+    \item Designed secure authentication (JWT + Spring Security), strengthening access control and reducing vulnerabilities.
+    \item Optimized PostgreSQL schema and queries, reducing latency by 40\% for large-scale reports.
+    \item Automated CI/CD pipelines with Docker, Jenkins, and Spinnaker; deployed 50+ releases with zero rollbacks.
+    \item Mentored 2 junior engineers, doubling sprint throughput through pair programming and code reviews.
+    \item Refactored legacy modules into modular components aligned with clean architecture, reducing maintenance costs.
+\end{highlights}
 
-\experienceentry
-  {Associate Software Engineer, Clarivate Analytics -- Bangalore, India}
-  {Aug 2021 -- Jul 2023}
-  {Full-Time}
-  {
-    \begin{highlights}
-        \item Developed dynamic Angular charts, reusable table components, and integrated Spring Boot APIs for advanced search and reporting features.
-        
-        \item Bootstrapped full-stack monorepo with Node.js backend and Angular frontend; configured CI/CD pipelines with Bitbucket, Jenkins, and Docker Compose for local and AWS deployments.
-        
-        \item Implemented JWT-based authentication flows, CORS, CSRF protection, and input sanitization, improving security posture and compliance.
-        
-        \item Standardized reusable modules and design patterns, contributing to internal frameworks and documentation adopted across 5+ modules.
-        
-        \item Built and deployed containerized applications to AWS EC2/ECS with secure environment variables and firewall rules.
-        
-        \item Wrote unit tests with Jasmine and JUnit, plus E2E tests with Protractor, achieving 90\%+ test coverage and reducing production bugs by 25\%.
-        
-        \item Maintained accessibility standards with ARIA roles, semantic HTML, and keyboard navigation; improved Lighthouse scores to 95+.
-    \end{highlights}
-  }
+\textbf{Associate Software Engineer, Clarivate Analytics} -- Bangalore, India \hfill \textit{Aug 2021 -- Jul 2023} \\
+\begin{highlights}
+    \item Built Angular charts and reusable table components integrated with Spring Boot APIs for advanced search features.
+    \item Bootstrapped a full-stack monorepo (Node.js + Angular) with Dockerized CI/CD pipelines, accelerating AWS deployments.
+    \item Implemented secure auth flows (JWT, CORS, CSRF) and input sanitization, reducing security incidents.
+    \item Standardized reusable modules adopted across 5+ teams, cutting onboarding time by 50\%.
+    \item Increased test coverage to 90\%+ with Jasmine, JUnit, Protractor, reducing production bugs by 25\%.
+    \item Deployed containerized apps to AWS ECS/EC2 with secure firewall rules, improving system resilience.
+\end{highlights}
 
-
-
-\newcommand{\projectentry}[4]{%
-  \noindent\textbf{#1} \hfill \textit{#2}\\
-  \textit{#3} \\
-  #4
-  \vspace{0.3cm}
-}
+% --- Projects ---
 \section{Projects}
-  
-\projectentry
-  {Battle Arena – Multiplayer Artillery Game Platform}
-  {May 2024 - Present}
-  {GitHub · Angular, Phaser 3, Spring Boot, Node.js, MongoDB, WebSockets, Docker, AWS}
-  {
-    \begin{highlights}
-    \item Architected and implemented a full-stack real-time multiplayer game platform inspired by Pocket Tanks, supporting modular player types (tanks, wizards, mechs) and pluggable arena systems.
-    \item Designed a scalable microservices architecture, separating concerns across services: auth-service, user-profile-service, leaderboard-service, matchmaking-service, game-engine-service.
-    \item Integrated Phaser 3 game engine within Angular 17 for smooth turn-based 2D artillery gameplay inside a browser.
-    \item Developed backend with Spring Boot REST APIs for user management and leaderboards, and Node.js + Socket.io services for real-time matchmaking and gameplay physics.
-    \item Used MongoDB for flexible storage of user profiles, match histories, and ranking data, enabling easy schema evolution.
-    \item Containerized all services with Docker, orchestrated via docker-compose, enabling one-command local development and future CI/CD scalability.
-    \item Implemented JWT-based authentication, modular Angular routing, and dynamic UI features like dashboards, player stats, and leaderboards.
-    \end{highlights}
-  }
 
-\projectentry
-  {Better Finance – Hackathon Project (UTA)}
-  {Hackathon - Mar 2025}
-  {GitHub · Angular, Flask, Streamlit, PostgreSQL, Plaid API, Docker}
-  {
-    \begin{highlights}
-    \item Developed in a team of 3 during a university hackathon; built a full-stack platform for AI-powered personal finance management.
-    \item Integrated Plaid API for secure bank account linking and real-time transaction syncing.
-    \item Implemented OCR-based invoice processing and financial advice chatbot using AI/ML models.
-    \item Designed Streamlit UI for quick access to account overviews, transaction analytics, and budget alerts.
-    \item Containerized services using Docker for quick deployment and hackathon-scale setup.
-    \end{highlights}
-  }
+\textbf{Employee Management System (EMS)} \hfill \textit{Dec 2024 – Present} \\
+\textit{A cloud-hosted enterprise system for managing employees and departments with real-time metrics, CI/CD pipelines, and secure AWS deployment.} \\
+\textbf{Tools: } Spring Boot, Angular, PostgreSQL, AWS, Docker, Jenkins \\
+\begin{highlights}
+    \item Engineered Spring Boot APIs with filtering, pagination, and sorting for employee/department management.
+    \item Automated CI/CD pipelines in Jenkins for Angular + Spring Boot, reducing deployment effort by 70\%.
+    \item Deployed PostgreSQL on AWS RDS and backend on AWS EC2 with secure environment configs and firewall rules.
+    \item Designed dashboard metrics and Chart.js visualizations to monitor employee and department trends.
+\end{highlights}
+\vspace{0.3cm}
+
+\textbf{Battle Arena – Multiplayer Artillery Game Platform} \hfill \textit{May 2024 – Present} \\
+\textit{A real-time multiplayer gaming platform with modular microservices, scalable matchmaking, and browser-based turn-based gameplay.} \\
+\textbf{Tools: } Angular, Phaser 3, Spring Boot, Node.js, MongoDB, WebSockets, Docker, AWS \\
+\begin{highlights}
+    \item Designed microservices (auth, leaderboard, matchmaking, gameplay) to support scalable multiplayer battles.
+    \item Integrated Phaser 3 engine with Angular 17 for smooth turn-based gameplay in-browser.
+    \item Implemented real-time matchmaking and gameplay physics with Node.js + Socket.io for concurrent players.
+    \item Deployed containerized services via Docker Compose and AWS for CI/CD readiness.
+\end{highlights}
+\vspace{0.3cm}
+
+\textbf{Better Finance – Hackathon Project (UTA)} \hfill \textit{Mar 2025} \\
+\textit{An AI-powered personal finance manager integrating Plaid API, OCR invoice scanning, and chatbot-driven financial insights.} \\
+\textbf{Tools: } Angular, Flask, Streamlit, PostgreSQL, Plaid API, Docker \\
+\begin{highlights}
+    \item Built AI-powered personal finance manager in a team of 3, recognized for innovation at hackathon.
+    \item Integrated Plaid API for secure bank linking and real-time transaction syncing.
+    \item Implemented OCR invoice scanning and AI-driven financial advice chatbot for budgeting insights.
+    \item Designed Streamlit UI for account overviews, transaction analytics, and budget alerts.
+\end{highlights}
 
 
-
-  \projectentry
-  {Employee Management System (EMS)}
-  {Dec 2024 – Present}
-  {Spring Boot, Angular, PostgreSQL, AWS, Docker, Jenkins}
-  {
-    \begin{highlights}
-      \item Built robust Spring Boot REST APIs for employee/department management, dashboard metrics, and real-time data filtering (pagination, sorting, dynamic POST queries).
-      \item Deployed PostgreSQL on AWS RDS and backend on AWS EC2 using .env-based secure auth and custom firewall rules.
-      \item Containerized services using Docker and an automated CI/CD pipeline with Jenkins for both frontend (Angular) and backend (Spring Boot).
-      \item Implemented CORS, centralized error handling, and DTO-layered clean architecture.
-      \item Designed and connected metric cards API and department/employee charts (Chart.js).
-      \item Future-proofed system with modular microservice-friendly design, aligning with Clean Architecture patterns.
-    \end{highlights}
-  }
-
-% \projectentry
-%   {AI-Powered Personal Finance Manager}
-%   {Feb – April 2025}
-%   {Flask, Streamlit, Python, Plaid API, AWS EC2, Docker}
-%   {
-%     \begin{highlights}
-%       \item Engineered Flask-based REST API microservices to interact with Plaid's Banking API for secure token exchange, account linking, and transaction retrieval.
-%       \item Deployed backend on AWS EC2 and used Docker to containerize services for portability and scaling.
-%       \item Implemented advanced financial insights (monthly trends, category-based expenses) using Python and Pandas.
-%       \item Built Streamlit frontend with a 3-step user journey (link bank $\Rightarrow$ fetch transactions $\Rightarrow$ view insights).
-%       \item Secured sandbox production access and submitted compliant API usage proposal to Plaid.
-%     \end{highlights}
-%   }
+% --- Certifications ---
 \section{Certifications}
-\begin{onecolentry}
-    \item AWS Certified Cloud Practitioner – CLF-C02 (2025)
-    \item AWS Certified Developer – Associate – DVA-C02 (2025)
-    \item AWS Certified Solutions Architect – Associate – SAA-C03 (2025)
-    \item Oracle Certified Professional: Java SE 17 Developer – 1Z0-829 (2025)
-    \item AWS Skill Builder Badges: Cloud Essentials, Serverless on AWS, Cloud Quest Practitioner, AI Services, ML Basics (2025)
-\end{onecolentry}
-
+\begin{highlights}
+    \item AWS Certified Solutions Architect – Associate (2025)
+    \item AWS Certified Developer – Associate (2025)
+    \item AWS Certified Cloud Practitioner (2025)
+    \item Oracle Certified Professional: Java SE 17 Developer (2025)
+\end{highlights}
 
 \end{document}
