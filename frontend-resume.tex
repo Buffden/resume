@@ -54,11 +54,10 @@
 \pagenumbering{gobble}
 
 \titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
-
 \titlespacing{\section}{-1pt}{0.3 cm}{0.2 cm}
 
 \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
-\newenvironment{highlights}{\begin{itemize}[topsep=0.10 cm, parsep=0.10 cm, partopsep=0pt, itemsep=2pt, leftmargin=10pt]}{\end{itemize}}
+\newenvironment{highlights}{\begin{itemize}[topsep=0.08 cm, parsep=0.06 cm, partopsep=0pt, itemsep=2pt, leftmargin=10pt]}{\end{itemize}}
 \newenvironment{onecolentry}{\begin{adjustwidth}{0 cm}{0 cm}}{\end{adjustwidth}}
 \newenvironment{twocolentry}[2][]{\onecolentry\def\secondColumn{#2}\setcolumnwidth{\fill, 4.5 cm}\begin{paracol}{2}}{\switchcolumn \raggedleft \secondColumn\end{paracol}\endonecolentry}
 
@@ -68,6 +67,7 @@
 \newsavebox\ANDbox
 \sbox\ANDbox{$|$}
 
+% ---------- Header ----------
 \begin{center}
     {\fontsize{25 pt}{25 pt}\selectfont Harshwardhan Patil}
 
@@ -82,14 +82,19 @@
 \end{center}
 
 \vspace{0.1 cm}
+
+% ---------- Helpers ----------
 \newcommand{\educationentry}[4]{%
   \noindent\textbf{#1} \hfill \textit{#2}\\
   \textit{#3} \\
   #4
 }
-\section{Overview}
-    \textbf{Frontend-focused Full-Stack Developer} with 3+ years’ experience delivering high-impact, reusable Angular solutions, optimizing performance and accessibility, and driving zero-defect production releases. Proven track record mentoring junior engineers, building CI/CD pipelines, and contributing to scalable system architecture.
 
+% ---------- Overview ----------
+\section{Overview}
+\textbf{Frontend Engineer (Angular)} with 3+ years’ experience building \textbf{scalable, accessible, and high-performance} web applications. Specialized in \textbf{Angular (CLI, Material, RxJS)}, \textbf{D3.js} data visualization, reusable UI systems, and \textbf{performance/accessibility} improvements (ARIA). Solid grounding in \textbf{API integration} (REST/JSON), \textbf{secure auth} (JWT, CORS, CSRF), and lean \textbf{CI/CD} to ship reliably (\textbf{50+ zero-rollback} releases). Mentors engineers and aligns implementations with clean frontend architecture.
+
+% ---------- Education ----------
 \section{Education}
 \educationentry
     {University of Texas at Arlington}
@@ -97,33 +102,28 @@
     {Master’s in Software Engineering}
     {
     \begin{highlights}
-        \item \textbf{Relevant Coursework:} System Design, Software Testing, Cloud Computing, AI/ML with Python, Distributed Systems
-        \end{highlights}
+        \item Coursework: System Design, Software Testing, Cloud Computing, AI/ML with Python, Distributed Systems
+    \end{highlights}
     }
-    
+
+% ---------- Technical Skills ----------
 \section{Technical Skills}
 \begin{onecolentry}
-    \item \textbf{Programming Languages}: TypeScript, JavaScript, Java, Python, SQL, Bash
-    \item \textbf{Frontend Development}: Angular (CLI, Material, RxJS), HTML5, CSS3, Responsive Design, Lazy Loading, Routing Guards, Component Reusability, Accessibility (ARIA, Lighthouse), D3.js
-    \item \textbf{Backend Development}: Spring Boot, Spring Security, Spring Data JPA, Node.js, Flask, RESTful API Design, DTO Pattern, JWT Authentication, Clean Architecture, Microservices
-    \item \textbf{Full Stack \& Architecture}: System Design, SOLID Principles, Domain-Driven Design (DDD), Modular Monoliths, Event-Driven Architecture (EDA), High-/Low-Level Design (HLD/LLD), UML (Class, Sequence, Activity Diagrams), MVC, Code Quality
-    \item \textbf{DevOps \& Deployment}: Docker, Docker Compose, Jenkins, GitHub Actions, GitLab CI/CD, Spinnaker, Nginx, Apache HTTP Server, Terraform
-    \item \textbf{Cloud Platforms}: AWS (EC2, ECS, RDS, S3, Lambda, Aurora), Kubernetes (basic), Cloud Networking, Environment Variables, IAM Policies
-    \item \textbf{Databases \& Tools}: PostgreSQL, MySQL, MongoDB, Amazon DynamoDB, Redis, pgAdmin, DBeaver, MongoDB Compass
-    \item \textbf{Testing \& Quality}: Jasmine, JUnit, PyTest, SonarQube (Self-hosted \& Cloud), E2E Testing (Protractor), Postman Tests, Chrome Dev Tools
-    \item \textbf{Security \& Auth}: Spring Security, OAuth 2.0 (basic), JWT, CORS, HTTPS, CSRF Protection, Role-Based Access Control (RBAC)
-    \item \textbf{Developer Tools}: Git, VS Code, IntelliJ IDEA, Jira, Notion, Figma, Draw.io, Mermaid
-    \item \textbf{Productivity \& CLI Tools}: Tmux, Vim, Zsh, CLI Debugging, Homebrew
-    \item \textbf{Agile \& Collaboration}: Agile, Scrum, Sprint Planning, Technical Presentations, Mentoring, DevOps Advocacy, Documentation, Continuous Learning
+    \item \textbf{Languages:} TypeScript, JavaScript, Java, Python, SQL
+    \item \textbf{Frontend:} Angular (CLI, Material, RxJS), D3.js, HTML5, CSS3, Responsive Design, Lazy Loading, Routing Guards, Component Reusability, Accessibility (ARIA)
+    \item \textbf{Testing \& Quality:} Jasmine, Protractor (E2E), SonarQube, Postman, Chrome DevTools
+    \item \textbf{API \& Auth (Integration):} REST APIs, JSON, JWT, CORS, HTTPS, CSRF, RBAC
+    \item \textbf{Build/Deploy (for FE):} Docker, Jenkins, GitHub Actions, GitLab CI/CD
+    \item \textbf{Datastores (for FE integration):} PostgreSQL, MySQL, MongoDB, Redis
+    \item \textbf{Cloud (light usage):} AWS (EC2, S3, RDS), Nginx
+    \item \textbf{Working Knowledge:} Spring Boot, Node.js, Kafka (basic), Kubernetes (basic)
 \end{onecolentry}
 
-
-
+% ---------- Experience ----------
 \newcommand{\experienceentry}[4]{%
   \noindent\textbf{#1} \hfill \textit{#2}\\
   \textit{#3} \\
   #4
-  % \vspace{0.3cm}
 }
 
 \section{Professional Experience}
@@ -134,29 +134,13 @@
   {Full-Time}
   {
     \begin{highlights}
-        \item Designed and developed a fully reusable, configurable table component in \textbf{Angular}, enabling dynamic column ordering, user preference storage, and real-time updates. Integrated chips, links, buttons, and side panels for rich interactions, plus seamless Excel export using \textbf{Apache POI}, reducing table code duplication by \textbf{80\%+}.
-
-        \item Built a sophisticated dynamic filter system with a two-pane popup UI, delivering real-time interdependent filtering logic where selected options narrow down others automatically. Added a robust reset-to-last-applied-state feature, intuitive chips for active filters, and a ‘Clear All’ function, enhancing data exploration usability.
-        
-        \item Architected generic, reusable \textbf{D3.js} components for bar, stacked bar, line, and pie charts with abstracted chart data preparation and configuration methods. Enabled flexible injection of chart options for legends, tooltips, labels, and colors, driving consistent, maintainable visualizations across modules.
-        
-        
-        \item Developed robust \textbf{PPT/PDF export functionality} using \textbf{RxJS forkJoin}, resolving large report download performance issues and improving content clarity for business users.
-        
-        \item Refactored legacy modules to follow modern \textbf{Angular best practices}, transforming them into reusable, modular components that improved maintainability, scalability, and future feature development.
-
-        \item Maintained full ownership of \textbf{56+ production releases} over \textbf{28 months}, executing error-free deployments for high-stakes systems using \textbf{wiki} for release tracking and reports (\textit{release.xl}), while automating infrastructure provisioning and pipelines with \textbf{Spinnaker}, \textbf{Terraform}, and \textbf{Jenkins} to rapidly roll out Dockerized applications from \textbf{Bitbucket} across \textbf{AWS environments}.
-        
-        \item Achieved and maintained \textbf{90\%+ unit test coverage} across UI modules using \textbf{Jasmine} and \textbf{SonarQube}, ensuring clean, secure code and reliable feature rollouts with minimal post-release defects.
-        
-        \item Mentored \textbf{2 junior Angular developers} through weekly pairing sessions, architecture reviews, and knowledge transfer, enabling them to deliver at \textbf{100\% sprint capacity} (up from 50\%) and cutting their training phase in half — saving over \textbf{2 months} of onboarding time for the team.
-        
-        \item Engineered complex \textbf{tree filters} and \textbf{search result bookmarking} in \textbf{Angular 17}, \textbf{Spring Boot}, and \textbf{PostgreSQL}, enabling users to save and revisit custom search results seamlessly — driving collaborative success across frontend and backend layers and improving user efficiency.
-
-        \item Implemented high-resolution \textbf{qualitative data rendering} with \textbf{pie chart visualizations}, boosting analytical clarity during \textbf{User UAT} and cutting manual feedback cycles by \textbf{30\%}.
-        
+        \item \textbf{Reusable UI Platform:} Built a configurable Angular table system (dynamic columns, saved prefs, chips/side-panels, Excel export) that \textbf{cut duplicate UI code by 80\%+} and accelerated feature delivery.
+        \item \textbf{Advanced Filtering UX:} Delivered a two-pane dynamic filter UI with interdependent logic, reset-to-last-applied state, chips, and clear-all — improving discoverability and user task completion.
+        \item \textbf{Data Visualization Library:} Authored reusable \textbf{D3.js} components (bar/stacked/line/pie) with pluggable options (legends, tooltips, labels), standardizing charts across modules and reducing maintenance.
+        \item \textbf{Perf/Exports:} Implemented PPT/PDF export with \textbf{RxJS forkJoin} and streaming to handle large reports, reducing timeouts and improving business consumption.
+        \item \textbf{Quality \& Release:} Sustained \textbf{90\%+} FE test coverage (Jasmine, SonarQube) and shipped \textbf{50+ releases with zero rollbacks} via lean CI/CD (Docker, Jenkins); partnered with BE on API contracts.
+        \item \textbf{Mentorship:} Coached 2 junior Angular devs (pairing, reviews, patterns), \textbf{doubling} their sprint throughput and improving code quality.
     \end{highlights}
-
   }
 
 \experienceentry
@@ -165,111 +149,56 @@
   {Full-Time}
   {
     \begin{highlights}
-    \item Designed and implemented reusable \textbf{spike charts} and \textbf{advanced search functionality} using \textbf{Angular} and \textbf{D3.js}, improving data usability and reducing development effort.
-    \item Bootstrapped a full-stack \textbf{Node.js} backend and \textbf{Angular} frontend monorepo, setting up \textbf{Bitbucket} branching rules and CI/CD pipelines for builds, testing, and deployments.
-    
-    % \item Integrated \textbf{centralized logging} with \textbf{Azure Monitor} to monitor runtime logs and exceptions across services.
-    
-    \item Containerized \textbf{Angular}, \textbf{Node.js}, and \textbf{Spring Boot} services with \textbf{Docker Compose} for local dev and \textbf{AWS EC2/ECS} deployment.
-    
-    \item Defined \textbf{repository governance} standards in \textbf{Bitbucket} with protected branches, PR approvals, and code quality gates, ensuring consistent, high-quality releases.
-
-    \item Developed user-focused features including advanced \textbf{tree filters}, \textbf{bookmarkable tables}, and \textbf{saved search functionality}, collaborating with cross-functional teams to deliver dynamic filtering logic that adapts to evolving user requirements and enhances end-user experience across modules.
-
-    \item Standardized and documented \textbf{reusable chart and filter modules}, contributing to an internal \textbf{design system} adopted across \textbf{5+ modules} and reducing onboarding time by \textbf{50\%}.
-
-    \item Owned and executed \textbf{15+ production releases} with zero rollbacks, ensuring high availability and reliability for critical product modules early in my career.
-
-    \item Implemented \textbf{lazy-loaded modules} and optimized state management patterns in \textbf{Angular} to reduce initial bundle size and improve page load times by \textbf{30\%}.
-
-    \item Improved application \textbf{accessibility} by adding ARIA roles, semantic HTML, and keyboard navigation support, raising Lighthouse a11y scores to \textbf{95+}.
-
-    \item Wrote and maintained \textbf{Jasmine unit tests} for frontend modules, achieving \textbf{90\%+ test coverage} and ensuring high code quality with minimal post-release defects.
-
-    \item Built robust \textbf{end-to-end (E2E)} and integration tests using \textbf{Protractor} and \textbf{Jasmine}, extending coverage beyond unit tests to catch regressions early and reduce production bugs by \textbf{25\%}.
-
-    \item Enforced \textbf{frontend security} best practices, including secure authentication flows with \textbf{JWT}, CORS configuration, CSRF protection, and input sanitization to prevent XSS vulnerabilities.
-
+        \item \textbf{Feature Delivery:} Built Angular charting (D3.js) and reusable table components integrated with REST APIs for advanced search/reporting.
+        \item \textbf{Frontend Performance:} Adopted lazy-loaded modules and optimized state/immutability patterns, \textbf{reducing initial load times by 30\%}.
+        \item \textbf{Accessibility:} Implemented ARIA roles, semantic HTML, keyboard navigation — raising Lighthouse a11y to \textbf{95+}.
+        \item \textbf{Security on FE:} Implemented secure client flows (JWT, CORS, CSRF), input sanitization, and error handling patterns to reduce incidents.
+        \item \textbf{Design System:} Standardized chart/filter modules and docs, adopted across \textbf{5+} modules; cut onboarding time by \textbf{50\%}.
+        \item \textbf{Quality:} Drove FE coverage to \textbf{90\%+} (Jasmine, Protractor) and reduced production bugs by \textbf{25\%}.
     \end{highlights}
   }
 
-
-\newcommand{\projectentry}[4]{%
-  \noindent\textbf{#1} \hfill \textit{#2}\\
-  \textit{#3} \\
-  #4
-  \vspace{0.3cm}
-}
+% ---------- Projects ----------
 \section{Projects}
-  
-\projectentry
-  {Battle Arena – Multiplayer Artillery Game Platform}
-  {May 2024 - Present}
-  {GitHub · Angular, Phaser 3, Spring Boot, Node.js, MongoDB, WebSockets, Docker, AWS}
-  {
-    \begin{highlights}
-    \item Architected and implemented a full-stack real-time multiplayer game platform inspired by Pocket Tanks, supporting modular player types (tanks, wizards, mechs) and pluggable arena systems.
-    \item Designed a scalable microservices architecture, separating concerns across services: auth-service, user-profile-service, leaderboard-service, matchmaking-service, game-engine-service.
-    \item Integrated Phaser 3 game engine within Angular 17 for smooth turn-based 2D artillery gameplay inside a browser.
-    \item Developed backend with Spring Boot REST APIs for user management and leaderboards, and Node.js + Socket.io services for real-time matchmaking and gameplay physics.
-    \item Used MongoDB for flexible storage of user profiles, match histories, and ranking data, enabling easy schema evolution.
-    \item Containerized all services with Docker, orchestrated via docker-compose, enabling one-command local development and future CI/CD scalability.
-    \item Implemented JWT-based authentication, modular Angular routing, and dynamic UI features like dashboards, player stats, and leaderboards.
-    \end{highlights}
-  }
 
-\projectentry
-  {Better Finance – Hackathon Project (UTA)}
-  {Hackathon - Mar 2025}
-  {GitHub · Angular, Flask, Streamlit, PostgreSQL, Plaid API, Docker}
-  {
-    \begin{highlights}
-    \item Developed in a team of 3 during a university hackathon; built a full-stack platform for AI-powered personal finance management.
-    \item Integrated Plaid API for secure bank account linking and real-time transaction syncing.
-    \item Implemented OCR-based invoice processing and financial advice chatbot using AI/ML models.
-    \item Designed Streamlit UI for quick access to account overviews, transaction analytics, and budget alerts.
-    \item Containerized services using Docker for quick deployment and hackathon-scale setup.
-    \end{highlights}
-  }
+\textbf{Employee Management System (EMS)} \hfill \textit{Dec 2024 -- Present} \\
+\textit{A cloud-hosted Angular dashboard with real-time metrics, secure auth, and CI/CD-backed releases.} \\
+Angular, Spring Boot (APIs), Chart.js, PostgreSQL, AWS (EC2/RDS), Docker, Jenkins \\
+\begin{highlights}
+    \item Built Angular dashboards and forms consuming REST APIs with filtering, pagination, and sorting.
+    \item Automated FE/BE pipelines (Jenkins) for quick, reliable releases; integrated Dockerized builds.
+    \item Implemented auth-aware UI (JWT, guards, interceptors) and consistent error/empty/loading states.
+    \item Designed Chart.js visualizations for department/employee metrics; improved decision visibility.
+\end{highlights}
+\vspace{0.3cm}
 
+\textbf{Battle Arena – Multiplayer Artillery Game} \hfill \textit{May 2024 -- Present} \\
+\textit{A browser-based Angular + Phaser experience with scalable matchmaking and real-time gameplay.} \\
+Angular 17, Phaser 3, WebSockets (Socket.io), Node.js (RT services), Spring Boot (profiles/leaderboard), MongoDB, Docker \\
+\begin{highlights}
+    \item Integrated \textbf{Phaser 3} within Angular for smooth turn-based rendering, input handling, and scene management.
+    \item Implemented real-time matchmaking and status UI with WebSockets; handled concurrent players and state sync.
+    \item Built reusable UI modules (lobbies, leaderboards, HUD) and route guards for session/auth flows.
+    \item Containerized FE/RT services for consistent local dev and CI/CD readiness.
+\end{highlights}
+\vspace{0.3cm}
 
+\textbf{Better Finance – Hackathon (UTA)} \hfill \textit{Mar 2025} \\
+\textit{An AI-assisted finance UI with Plaid integration, OCR receipts, and insights.} \\
+Angular, Flask APIs, Streamlit (prototyping), PostgreSQL, Plaid API, Docker \\
+\begin{highlights}
+    \item Built Angular flows for secure bank-linking and transactions view; used Plaid sandbox for testing.
+    \item Added OCR-based invoice uploads and insight panels; clarified spend patterns and budgets.
+    \item Produced a quick prototype dashboard in Streamlit for judges; packaged with Docker for demos.
+\end{highlights}
 
-  \projectentry
-  {Employee Management System (EMS)}
-  {Dec 2024 – Present}
-  {Spring Boot, Angular, PostgreSQL, AWS, Docker, Jenkins}
-  {
-    \begin{highlights}
-      \item Built robust Spring Boot REST APIs for employee/department management, dashboard metrics, and real-time data filtering (pagination, sorting, dynamic POST queries).
-      \item Deployed PostgreSQL on AWS RDS and backend on AWS EC2 using .env-based secure auth and custom firewall rules.
-      \item Containerized services using Docker and an automated CI/CD pipeline with Jenkins for both frontend (Angular) and backend (Spring Boot).
-      \item Implemented CORS, centralized error handling, and DTO-layered clean architecture.
-      \item Designed and connected metric cards API and department/employee charts (Chart.js).
-      \item Future-proofed system with modular microservice-friendly design, aligning with Clean Architecture patterns.
-    \end{highlights}
-  }
-
-% \projectentry
-%   {AI-Powered Personal Finance Manager}
-%   {Feb – April 2025}
-%   {Flask, Streamlit, Python, Plaid API, AWS EC2, Docker}
-%   {
-%     \begin{highlights}
-%       \item Engineered Flask-based REST API microservices to interact with Plaid's Banking API for secure token exchange, account linking, and transaction retrieval.
-%       \item Deployed backend on AWS EC2 and used Docker to containerize services for portability and scaling.
-%       \item Implemented advanced financial insights (monthly trends, category-based expenses) using Python and Pandas.
-%       \item Built Streamlit frontend with a 3-step user journey (link bank $\Rightarrow$ fetch transactions $\Rightarrow$ view insights).
-%       \item Secured sandbox production access and submitted compliant API usage proposal to Plaid.
-%     \end{highlights}
-%   }
+% ---------- Certifications ----------
 \section{Certifications}
-\begin{onecolentry}
-    \item AWS Certified Cloud Practitioner – CLF-C02 (2025)
-    \item AWS Certified Developer – Associate – DVA-C02 (2025)
-    \item AWS Certified Solutions Architect – Associate – SAA-C03 (2025)
-    \item Oracle Certified Professional: Java SE 17 Developer – 1Z0-829 (2025)
-    \item AWS Skill Builder Badges: Cloud Essentials, Serverless on AWS, Cloud Quest Practitioner, AI Services, ML Basics (2025)
-\end{onecolentry}
-
+\begin{highlights}
+    \item AWS Certified Solutions Architect – Associate (2025)
+    \item AWS Certified Developer – Associate (2025)
+    \item AWS Certified Cloud Practitioner (2025)
+    \item Oracle Certified Professional: Java SE 17 Developer (2025)
+\end{highlights}
 
 \end{document}
