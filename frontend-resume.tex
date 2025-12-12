@@ -92,7 +92,7 @@
 
 % ---------- Overview ----------
 \section{Overview}
-\textbf{Frontend Engineer} with 3+ years of industrial experience building \textbf{scalable, accessible, and high-performance} web applications. Specialized in modern frontend frameworks, data visualization, reusable full-stack systems, and \textbf{performance/accessibility} improvements. Practices \textbf{secure programming} principles throughout development lifecycle. Solid grounding in \textbf{API integration}, \textbf{secure authentication}, and lean \textbf{CI/CD} practices to ship reliably with \textbf{zero-rollback} releases. Mentors engineers and aligns implementations with clean architecture.
+\textbf{Frontend Engineer (Angular)} with 3+ years’ experience building \textbf{scalable, accessible, and high-performance} web applications. Specialized in \textbf{Angular (CLI, Material, RxJS)}, \textbf{D3.js} data visualization, reusable UI systems, and \textbf{performance/accessibility} improvements (ARIA). Solid grounding in \textbf{API integration} (REST/JSON), \textbf{secure auth} (JWT, CORS, CSRF), and lean \textbf{CI/CD} to ship reliably (\textbf{50+ zero-rollback} releases). Mentors engineers and aligns implementations with clean frontend architecture.
 
 % ---------- Education ----------
 \section{Education}
@@ -102,7 +102,7 @@
     {Master’s in Software Engineering}
     {
     \begin{highlights}
-        \item Coursework: System Design, Software Testing, Cloud Computing, Distributed Systems, Secure Programming
+        \item Coursework: System Design, Software Testing, Cloud Computing, AI/ML with Python, Distributed Systems
     \end{highlights}
     }
 
@@ -110,12 +110,12 @@
 \section{Technical Skills}
 \begin{onecolentry}
     \item \textbf{Languages:} TypeScript, JavaScript, Java, Python, SQL
-    \item \textbf{Frontend:} Angular (CLI, Material, NgRx, RxJS), D3.js, HTML5, CSS3, Responsive Design, Lazy Loading, Routing Guards, Component Reusability, Accessibility
-    \item \textbf{Testing \& Quality:} Jasmine, Jest, JUnit, Protractor (E2E), SonarQube, Postman, Chrome DevTools
-    \item \textbf{API \& Auth:} REST APIs, JSON, SOAP, WebSockets, OAuth, JWT, CORS, HTTPS, CSRF, RBAC
-    \item \textbf{Build/Deploy:} Docker, Jenkins, GitHub Actions, GitLab CI/CD, Spinnaker
-    \item \textbf{Datastores:} PostgreSQL, MySQL, MongoDB, Redis, Prisma ORM, JPA
-    \item \textbf{Cloud:} AWS (EC2, S3, RDS), Apache HTTP Server, Nginx
+    \item \textbf{Frontend:} Angular (CLI, Material, RxJS), D3.js, HTML5, CSS3, Responsive Design, Lazy Loading, Routing Guards, Component Reusability, Accessibility (ARIA)
+    \item \textbf{Testing \& Quality:} Jasmine, Protractor (E2E), SonarQube, Postman, Chrome DevTools
+    \item \textbf{API \& Auth (Integration):} REST APIs, JSON, JWT, CORS, HTTPS, CSRF, RBAC
+    \item \textbf{Build/Deploy (for FE):} Docker, Jenkins, GitHub Actions, GitLab CI/CD
+    \item \textbf{Datastores (for FE integration):} PostgreSQL, MySQL, MongoDB, Redis
+    \item \textbf{Cloud (light usage):} AWS (EC2, S3, RDS), Nginx
     \item \textbf{Working Knowledge:} Spring Boot, Node.js, Kafka (basic), Kubernetes (basic)
 \end{onecolentry}
 
@@ -152,7 +152,7 @@
         \item \textbf{Feature Delivery:} Built Angular charting (D3.js) and reusable table components integrated with REST APIs for advanced search/reporting.
         \item \textbf{Frontend Performance:} Adopted lazy-loaded modules and optimized state/immutability patterns, \textbf{reducing initial load times by 30\%}.
         \item \textbf{Accessibility:} Implemented ARIA roles, semantic HTML, keyboard navigation — raising Lighthouse a11y to \textbf{95+}.
-        \item \textbf{Frontend Security:} Implemented secure client flows (JWT, CORS, CSRF), input sanitization, and error handling patterns to reduce incidents.
+        \item \textbf{Security on FE:} Implemented secure client flows (JWT, CORS, CSRF), input sanitization, and error handling patterns to reduce incidents.
         \item \textbf{Design System:} Standardized chart/filter modules and docs, adopted across \textbf{5+} modules; cut onboarding time by \textbf{50\%}.
         \item \textbf{Quality:} Drove FE coverage to \textbf{90\%+} (Jasmine, Protractor) and reduced production bugs by \textbf{25\%}.
     \end{highlights}
@@ -161,9 +161,9 @@
 % ---------- Projects ----------
 \section{Projects}
 
-\textbf{Employee Management System} \hfill \textit{Dec 2024 -- Present} \\
+\textbf{Employee Management System (EMS)} \hfill \textit{Dec 2024 -- Present} \\
 \textit{A cloud-hosted Angular dashboard with real-time metrics, secure auth, and CI/CD-backed releases.} \\
-\faGithub\ \href{https://github.com/Buffden/employee-management-system}{GitHub} | Angular, Spring Boot, Chart.js, PostgreSQL, AWS (EC2, Lambda, S3, RDS), Docker, Jenkins \\
+Angular, Spring Boot (APIs), Chart.js, PostgreSQL, AWS (EC2/RDS), Docker, Jenkins \\
 \begin{highlights}
     \item Built Angular dashboards and forms consuming REST APIs with filtering, pagination, and sorting.
     \item Automated FE/BE pipelines (Jenkins) for quick, reliable releases; integrated Dockerized builds.
@@ -174,7 +174,7 @@
 
 \textbf{Battle Arena – Multiplayer Artillery Game} \hfill \textit{May 2024 -- Present} \\
 \textit{A browser-based Angular + Phaser experience with scalable matchmaking and real-time gameplay.} \\
-\faGithub\ \href{https://github.com/Buffden/battle-arena}{GitHub} | Angular 17, Phaser 3, WebSockets (Socket.io), Node.js (RT services), Spring Boot (profiles/leaderboard), MongoDB, Docker \\
+Angular 17, Phaser 3, WebSockets (Socket.io), Node.js (RT services), Spring Boot (profiles/leaderboard), MongoDB, Docker \\
 \begin{highlights}
     \item Integrated \textbf{Phaser 3} within Angular for smooth turn-based rendering, input handling, and scene management.
     \item Implemented real-time matchmaking and status UI with WebSockets; handled concurrent players and state sync.
@@ -183,14 +183,13 @@
 \end{highlights}
 \vspace{0.3cm}
 
-\textbf{AI-Powered Personal Finance Manager} \hfill \textit{2025 -- Present} \\
-\textit{An intelligent finance web application with AI-driven expense categorization, budget tracking, bill reminders, and banking integration.} \\
-\faGithub\ \href{https://github.com/Buffden/AI-Powered-Personal-Finance-Manager}{GitHub} | Streamlit, Flask REST API, OpenAI GPT, Plaid API, AWS RDS, Docker, GitHub Actions \\
+\textbf{Better Finance – Hackathon (UTA)} \hfill \textit{Mar 2025} \\
+\textit{An AI-assisted finance UI with Plaid integration, OCR receipts, and insights.} \\
+Angular, Flask APIs, Streamlit (prototyping), PostgreSQL, Plaid API, Docker \\
 \begin{highlights}
-    \item Built interactive finance dashboard with real-time transaction visualization and budget tracking using Streamlit and Altair.
-    \item Integrated Plaid API for secure bank account linking and transaction history fetching; implemented AI-powered auto-categorization using OpenAI GPT.
-    \item Developed AI chatbot for financial insights and budgeting recommendations; implemented receipt scanning with ChatGPT Vision for expense extraction.
-    \item Created bill reminder system with UI and email alerts; designed analytics dashboard with spending trends, anomaly detection, and exportable reports.
+    \item Built Angular flows for secure bank-linking and transactions view; used Plaid sandbox for testing.
+    \item Added OCR-based invoice uploads and insight panels; clarified spend patterns and budgets.
+    \item Produced a quick prototype dashboard in Streamlit for judges; packaged with Docker for demos.
 \end{highlights}
 
 % ---------- Certifications ----------
