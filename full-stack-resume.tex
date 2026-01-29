@@ -3,11 +3,11 @@
 % --- Packages ---
 \usepackage[
     ignoreheadfoot,
-    top=1cm,
-    bottom=1cm,
-    left=1.2cm,
-    right=1.2cm,
-    footskip=1cm,
+    top=0.5cm,
+    bottom=0.5cm,
+    left=0.3cm,
+    right=0.3cm,
+    footskip=0.5cm,
 ]{geometry}
 \usepackage{titlesec}
 \usepackage{array}
@@ -39,9 +39,14 @@
 
 % --- Lists ---
 \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
-\newenvironment{highlights}{\begin{itemize}[topsep=0.05cm,parsep=0.05cm,partopsep=0pt,itemsep=2pt,leftmargin=10pt]}{\end{itemize}}
-\newenvironment{onecolentry}{\begin{adjustwidth}{0cm}{0cm}}{\end{adjustwidth}}
-
+\newenvironment{highlights}{\begin{itemize}[itemsep=1pt, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=10pt]}{\end{itemize}}
+\newenvironment{onecolentry}{
+  \begin{adjustwidth}{0cm}{0cm}
+  \begin{itemize}[itemsep=1pt, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=10pt]
+}{
+  \end{itemize}
+  \end{adjustwidth}
+}
 \begin{document}
 
 % --- Header ---
@@ -53,97 +58,93 @@
     \faLinkedin\ \href{https://www.linkedin.com/in/harshwardhanpatil23/}{LinkedIn} \hspace{1.2em}
     \faGithub\ \href{https://github.com/buffden}{GitHub} \hspace{1.2em}
     \faGlobe\ \href{https://buffden.github.io/buffden-portfolio/}{Portfolio}
+
 \end{center}
 
+{\small
+\vspace{-0.5cm}
 % --- Overview ---
 \section{Overview}
 Full-Stack Engineer with 3+ years’ experience designing and delivering \textbf{scalable, high-performance systems} across frontend, backend, and cloud. Skilled in modular architectures and CI/CD on AWS. Proven record of stable production releases, and building systems aligned with clean architecture and robust system design principles.
-
+\vspace{-0.2cm}
 % --- Education ---
 \section{Education}
-\textbf{University of Texas at Arlington} \hfill \textit{Expected May 2026} \\
-Master’s in Software Engineering
-\begin{highlights}
-  \item System Design, Secure Programming, Software Testing, Cloud Computing, Machine Learning, Distributed Systems
-\end{highlights}
-
+\textbf{University of Texas at Arlington}\hspace{1em}\textit{Master’s in Software Engineering} \hfill \textit{Expected May 2026} \\
+\vspace{-0.2cm}
 % --- Technical Skills ---
 \section{Technical Skills}
 \begin{onecolentry}
-    \item \textbf{Languages:} TypeScript, JavaScript, Java, SQL
-    \item \textbf{Frontend:} Angular (CLI, Material, RxJS), D3.js, HTML5, CSS3, Route Guards, Component Reusability
-    \item \textbf{Backend:} Spring Boot, Spring Security, Spring Data JPA, REST APIs, DTOs, JWT-based authentication, Clean Architecture
-    \item \textbf{Cloud \& DevOps:} AWS (EC2, ECS, S3, RDS), Docker, Jenkins, GitHub Actions, Spinnaker, Nginx
-    \item \textbf{Databases:} PostgreSQL, MySQL, MongoDB, Redis
-    \item \textbf{Testing:} Jasmine, JUnit, SonarQube, Postman
-    \item \textbf{Security:} JWT authentication, RBAC, HTTPS/TLS, CORS, CSRF/XSS protection, secure API design, input validation, Secure deployment practices and least-privilege access
+   \item \textbf{Languages \& Frameworks::} Java, TypeScript, JavaScript, SQL, Spring Boot, Angular, Node.js
+\item \textbf{Cloud \& DevOps:} AWS (EC2, ECS, S3, RDS, Secret Manager), Docker, Jenkins, GitHub Actions, Nginx, CI/CD
+\item \textbf{Databases:} PostgreSQL, Redis, MySQL, MongoDB, Database indexing, Query optimization
+\item \textbf{Testing \& Security:} JUnit, Jasmine, SonarQube, Postman, JWT, RBAC, HTTPS/TLS, CORS, CSRF/XSS protection
+\item \textbf{Design \& Architecture:} System Design, Low-Level Design, Design Patterns, SOLID principles, database schema design
+
 \end{onecolentry}
+\vspace{-0.2cm}
 
 % --- Professional Experience ---
 \section{Professional Experience}
 
 \textbf{Software Engineer, Clarivate Analytics} -- Bangalore, India \hfill \textit{Aug 2023 -- Aug 2024} \\
 \begin{highlights}
-    \item Delivered reusable Angular modules and Spring Boot APIs for reporting, reducing duplicate code by 80\%.
-    \item Refactored legacy modules into clean, modular architectures, lowering long-term maintenance costs.
-    \item Optimized PostgreSQL schemas and queries, reducing latency by 40\% for large-scale analytical reports.
-    \item Automated CI/CD pipelines using Docker, Jenkins, and Spinnaker, deploying 50+ releases with zero rollbacks.
-    \item Designed and enforced secure authentication using JWT and Spring Security, strengthening access control across services.
-    \item Mentored 2 junior engineers through pair programming and code reviews, doubling sprint throughput.
+    \item Developed dynamic PPT and PDF export pipelines, generating customized reports from charts and tables with custom filters, layouts, and metadata.
+    \item Proactively identified performance bottlenecks in reporting workflows and implemented optimizations across API, database, and caching layers.
+    \item Design and evolution of scalable Spring Boot REST APIs with explicit versioning, DTO-based contracts, and standardized error handling for long-term platform growth.
+    \item Implementation of role-based access control across backend and frontend layers, enforcing subscription-tier and region-based data visibility rules.
+    \item Designed and implemented low-latency typeahead and autocomplete workflows, improving search responsiveness over large-scale drug datasets.
+    \item Architected a highly configurable, reusable Angular table framework supporting filtering, pagination, exports, and user preference persistence, later adopted across multiple internal teams.
+    \item Containerized microservices and build deployment pipelines using Docker, Jenkins, and Spinnaker, supporting production releases with zero rollback.
+    \
+    \item Built reusable, aggregation-driven Angular chart components using D3.js, enabling interactive analytics and advanced reporting workflows.
 \end{highlights}
-
+\vspace{0.2cm}
 \textbf{Associate Software Engineer, Clarivate Analytics} -- Bangalore, India \hfill \textit{Aug 2021 -- Jul 2023} \\
 \begin{highlights}
-    \item Built Angular charts and reusable table components integrated with Spring Boot APIs for advanced search and reporting features.
-    \item Bootstrapped an Angular frontend application with Dockerized CI/CD pipelines, enabling automated builds and AWS deployments.
-    \item Standardized reusable frontend modules adopted across 5+ teams, reducing onboarding time by 50\%.
-    \item Optimized PostgreSQL queries and indexing strategies, improving data retrieval performance by 30\%.
-    \item Implemented secure authentication and request-handling mechanisms (JWT, CORS, CSRF protection), along with input validation standards.
-    \item Increased test coverage to 90\%+ using Jasmine and JUnit, reducing production defects by 25\%.
-    \item Deployed containerized applications to AWS ECS/EC2 with hardened security group configurations.
+    \item Supported continuous production release cycles over two years by deploying containerized services using Jenkins and Spinnaker, ensuring release stability and operational reliability.
+    \item Improved frontend performance by minimizing unnecessary re-renders and optimizing data-fetching patterns, resulting in ~20\% faster page loads.
+    \item Migrated a legacy client-side component to a modern Angular 13 application, contributing to C4-level architectural designs and business components.
+    \item Implemented and optimized PostgreSQL schemas, queries, and indexing strategies to improve performance for data-intensive analytical workloads.
+    \item Integrated Elasticsearch-backed search capabilities to support fast, advanced queries across large life sciences and drug datasets.
+    \item Developed reusable Angular UI components including charts and advanced table views, integrated with Spring Boot APIs for search and reporting.
+    \item Implemented secure request-handling mechanisms including JWT-based authentication, CORS/CSRF protection, and input validation standards.
 \end{highlights}
 
+\vspace{-0.2cm}
 % --- Projects ---
 \section{Projects}
 
-\textbf{Employee Management System (EMS)}\ \href{https://github.com/Buffden/employee-management-system}{\faGithub}\hspace{0.4em}\href{https://ems.buffden.com/}{\faGlobe} \hfill \textit{Dec 2024 – Nov 2025} \\
-\textit{Enterprise-grade full-stack employee management platform with real-time metrics and automated cloud deployment.} \\
+\textbf{Employee Management System}\ \href{https://github.com/Buffden/employee-management-system}{\faGithub}\hspace{0.4em}\href{https://ems.buffden.com/}{\faGlobe} \hfill \textit{Dec 2024 – Nov 2025} \\
+\textit{Unified platform for managing teams, projects, and access at scale. It integrates multiple tech stacks while ensuring robust security and compliance.} \\
 \textbf{Tools: } Spring Boot, Angular, PostgreSQL, AWS (EC2, RDS, S3, Secrets Manager), Docker, GitHub Actions, Jenkins \\
 \begin{highlights}
-    \item Engineered RESTful Spring Boot APIs supporting multi-entity management (employees, departments, projects, tasks, locations) with pagination, filtering, and search.
-    \item Developed a unified Angular frontend with responsive UI and integrated dashboard metrics.
-    \item Architected an Nginx API gateway to serve the frontend and proxy backend services.
-    \item Containerized application services using Docker Compose for consistent development, testing, and production environments.
-    \item Implemented end-to-end CI/CD pipelines using GitHub Actions and Jenkins to automate builds, testing, Docker image publishing, and AWS deployments.
-    \item Deployed the backend on AWS EC2 with PostgreSQL hosted on AWS RDS, secured using AWS Secrets Manager and firewall rules.
-    \item Integrated automated test suites into the CI pipeline to enforce code quality and reduce regressions.
+    \item Built to solve the challenge of managing teams and projects at scale, this system applies robust system design to unify multiple tech stacks, maintain RBAC, and automate deployments on AWS.
+    \item Engineered RESTful APIs supporting multi-entity management (employees, departments, projects, tasks) with pagination, filtering, and search.
+    \item Integrates real-time dashboards and secure role-based access, making onboarding and daily operations seamless for distributed teams.
 \end{highlights}
-\vspace{0.3cm}
+\vspace{0.2cm}
 
 \textbf{Battle Arena – Real-Time Multiplayer Platform}
 \href{https://github.com/Buffden/battle-arena}{\faGithub}
 \hfill \textit{May 2024 – Present} \\
-\textit{A browser-based artillery game platform focused on modular game-engine architecture, terrain-aware physics, and extensible multiplayer foundations.} \\
-\textbf{Tools: } Angular, Phaser 3, Spring Boot, Node.js, MongoDB, WebSockets, Docker, AWS \\
+\textit{Competitive multiplayer artillery game with modular engine, real-time sync, and physics-based gameplay. Built for low-latency, scalable tournaments.} \\
+\textbf{Tools: } Angular, Phaser 3, Spring Boot, Node.js, MongoDB, WebSockets, Docker, AWS (EC2, RDS, S3, Secrets Manager) \\
 \begin{highlights}
-    \item Designed modular backend services (authentication, matchmaking, leaderboard, gameplay orchestration) with clear separation between engine logic and platform services.
-    \item Integrated Phaser 3 with Angular 17 using a standalone component architecture, implementing polygon-based terrain boundaries, slope-aware tank movement, and collision-constrained navigation.
-    \item Built real-time communication primitives using Node.js and WebSockets to support turn-based multiplayer synchronization and future matchmaking workflows.
-    \item Containerized frontend, game engine, and backend services using Docker Compose, enabling reproducible local development and cloud-ready deployment on AWS.
+    \item Created to bring competitive gaming and physics-based fun to the browser, this platform solves multiplayer orchestration and real-time sync using custom backend and WebSocket logic.
+    \item Implemented terrain-aware movement and modular game engine, making it easy to add new features and to scale for future tournaments.
+    \item Designed modular backend services for authentication, matchmaking, and gameplay orchestration, ensuring extensibility and maintainability.
 \end{highlights}
-\vspace{0.3cm}
+\vspace{0.2cm}
 
 \textbf{AI-Powered Personal Finance Manager}
 \href{https://github.com/Buffden/AI-Powered-Personal-Finance-Manager}{\faGithub}
 \hfill \textit{Feb 2025 – April 2025} \\
-\textit{A full-stack personal finance platform leveraging real banking data and AI-driven insights for budgeting, expense analysis, and financial planning.} \\
+\textit{A personal finance manager that empowers users to track expenses, set budgets, and receive AI-driven recommendations for financial health.} \\
 \textbf{Tools: } Flask, Streamlit, Redis, Plaid API, Docker, AWS \\
 \begin{highlights}
-    \item Designed and developed a full-stack personal finance system integrating live banking data via Plaid APIs.
-    \item Built backend APIs in Flask for transaction ingestion, categorization, budgeting logic, and analytics.
-    \item Implemented data-driven insights including expense trend analysis, basic forecasting, and rule-based financial recommendations.
-    \item Designed interactive dashboards and reports for transaction analytics, budget tracking, and alerts.
-    \item Containerized services using Docker and planned cloud deployment on AWS for scalability and production readiness.
+    \item Built to help users take control of their finances, this platform connects to live banking data and delivers actionable insights for smarter budgeting and expense tracking.
+    \item Automated analytics and dashboards make financial planning intuitive, while secure cloud deployment ensures privacy and reliability.
+    \item Developed backend APIs for transaction ingestion, categorization, and analytics, leveraging Flask, Redis, and Plaid API for robust data processing.
 \end{highlights}
 
 
@@ -156,4 +157,5 @@ Master’s in Software Engineering
 %     \item Oracle Certified Professional: Java SE 17 Developer (2025)
 % \end{highlights}
 
+} % end small text group
 \end{document}
