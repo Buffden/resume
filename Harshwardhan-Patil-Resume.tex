@@ -3,10 +3,10 @@
 % --- Packages ---
 \usepackage[
     ignoreheadfoot,
-    top=0.5cm,
-    bottom=0.5cm,
-    left=0.3cm,
-    right=0.3cm,
+    top=0.7cm,
+    bottom=0.7cm,
+    left=0.7cm,
+    right=0.7cm,
     footskip=0.5cm,
 ]{geometry}
 \usepackage{titlesec}
@@ -23,7 +23,8 @@
     colorlinks=true,
     urlcolor=primaryColor
 ]{hyperref}
-\usepackage{charter}
+\usepackage[scaled=0.92]{helvet}
+\renewcommand\familydefault{\sfdefault}
 \usepackage{changepage}
 \usepackage{paracol}
 
@@ -65,23 +66,23 @@
 \vspace{-0.5cm}
 % --- Overview ---
 \section{Overview}
-Full-Stack Engineer with 3+ years’ experience designing and delivering \textbf{scalable, distributed systems} and \textbf{high-performance APIs} across frontend, backend, and cloud. Skilled in modular architectures, \textbf{production monitoring}, and CI/CD on \textbf{AWS}. Proven record of stable production releases and building systems with \textbf{fault tolerance}, \textbf{data consistency}, and robust system design principles.
-\vspace{-0.2cm}
-% --- Education ---
-\section{Education}
-\textbf{University of Texas at Arlington}\hspace{3.3em}\textit{Master’s in Software Engineering} \hfill \textit{May 2026} \\
-\textbf{BMS College of Engineering, India}\hspace{2em}\textit{Bachelor’s in Mechanical Engineering} \hfill \textit{July 2021} \\
+Full-Stack Engineer with \textbf{3+ years of experience} building scalable, distributed systems and high-performance APIs across frontend, backend, and cloud environments. Skilled in \textbf{system design}, CI/CD on AWS, production monitoring, and delivering \textbf{fault-tolerant, data-consistent services} at scale.
+
+
+
+
 \vspace{-0.2cm}
 % --- Technical Skills ---
 \section{Technical Skills}
 \begin{onecolentry}
    \item \textbf{Languages \& Frameworks:} Java, TypeScript, JavaScript, SQL, Python, Spring Boot, Angular, Node.js
-\item \textbf{Cloud \& DevOps:} AWS (EC2, ECS, S3, RDS, Secret Manager), Docker, Jenkins, GitHub Actions, Nginx, CI/CD
+\item \textbf{Cloud \& DevOps:} AWS (EC2, ECS, S3, RDS, Secrets Manager), Docker, Jenkins, GitHub Actions, Nginx, CI/CD
 \item \textbf{Databases:} PostgreSQL, Redis, MySQL, MongoDB, Database indexing, Query optimization
 \item \textbf{Testing \& Security:} JUnit, Jasmine, SonarQube, Postman, JWT, RBAC, HTTPS/TLS, CORS, CSRF/XSS protection
 \item \textbf{Design \& Architecture:} System Design, Low-Level Design, Design Patterns, SOLID principles, database schema design
 
 \end{onecolentry}
+
 \vspace{-0.2cm}
 
 % --- Professional Experience ---
@@ -93,24 +94,28 @@ Full-Stack Engineer with 3+ years’ experience designing and delivering \textbf
     \item Containerized and built deployment pipelines using Docker, Jenkins, and Spinnaker, supporting \textbf{50+ production releases} with \textbf{zero rollbacks}.
     \item Proactively identified performance bottlenecks in reporting services and optimized API and cache layers, reducing response latency by \textbf{25–35\%}.
     \item Implemented role-based access control across backend and frontend layers, enforcing tiered and region-based data visibility for \textbf{10+ access variants}.
-    \item Designed and implemented low-latency typeahead and autocomplete services, improving search response times by \textbf{~40\%} over large-scale datasets.
-    \item Architected a highly configurable, reusable Angular table framework adopted across \textbf{3 internal teams}, reducing duplicated frontend effort by \textbf{~50\%}.
+    \item Designed and implemented low-latency typeahead and autocomplete services, improving search response times by \textbf{40\%} over large-scale datasets.
+    \item Architected a highly configurable, reusable Angular table framework adopted across \textbf{3 internal teams}, reducing duplicated frontend effort by \textbf{50\%}.
     \item Built reusable, aggregation-driven Angular chart components using D3.js, powering \textbf{15+ analytics views} for interactive reporting services.
-    \item Developed dynamic PPT and PDF export pipelines, generating \textbf{100+ customized reports} with user-selected filters, layouts, and metadata.
+    \item Led and developed dynamic PPT and PDF export pipelines, generating \textbf{100+ customized reports} with user-selected filters, layouts, and metadata.
 \end{highlights}
 
 \vspace{0.2cm}
 \textbf{Associate Software Engineer, Clarivate Analytics} -- Bangalore, India \hfill \textit{Aug 2021 -- Jul 2023} \\
 \begin{highlights}
-    \item Optimized frontend rendering and state management for data-heavy views, improving responsiveness of interactive charts and tables by \textbf{~20–25\%}.
+    \item Optimized frontend rendering and state management for data-heavy views, improving responsiveness of interactive charts and tables by \textbf{20–25\%}.
     \item Implemented and optimized PostgreSQL schemas, queries, and indexing strategies, improving query performance by \textbf{40\%} for analytics services.
     \item Integrated Elasticsearch into Spring Boot to provide fast, advanced queries across \textbf{millions of drug records}, reducing search latency by \textbf{30\%}.
-    \item Improved frontend performance by minimizing unnecessary re-renders and optimizing data-fetching patterns, resulting in \textbf{~20\% faster page loads}.
+    \item Improved frontend performance by minimizing unnecessary re-renders and optimizing data-fetching patterns, resulting in \textbf{20\% faster page loads}.
     \item Migrated a legacy client-side component to an Angular 13 application, rebuilding \textbf{5+ core business flows} with a modular architecture.
     \item Implemented secure request-handling mechanisms, including JWT authentication, CORS/CSRF protection, and input validation in \textbf{multiple services}.
-    \item Developed reusable Angular UI components, including charts and advanced table views, reused across \textbf{multiple reporting modules} consistently.
+    \item Developed and led reusable Angular UI components, including charts and advanced table views, reused across \textbf{multiple reporting modules} consistently.
 \end{highlights}
-
+\vspace{-0.2cm}
+% --- Education ---
+\section{Education}
+\textbf{University of Texas at Arlington}\hspace{3.3em}\textit{Master’s in Software Engineering} \hfill \textit{May 2026} \\
+\textbf{BMS College of Engineering, India}\hspace{2em}\textit{Bachelor’s in Mechanical Engineering} \hfill \textit{July 2021} \\
 \vspace{-0.2cm}
 % --- Projects ---
 \section{Projects}
@@ -129,7 +134,7 @@ Full-Stack Engineer with 3+ years’ experience designing and delivering \textbf
 \textit{Real-time multiplayer system featuring a modular game engine, physics-based simulation, and distributed backend services.} \\
 \textbf{Tools: } Angular, Phaser 3, Spring Boot, Node.js, MongoDB, WebSockets, Docker, AWS \\
 \begin{highlights}
-    \item Designed a \textbf{distributed backend architecture} for real-time multiplayer gameplay, evaluating polling vs \textbf{WebSocket-based} communication and implementing custom protocols to balance latency, consistency, and scalability.
+    \item Designed a \textbf{distributed backend architecture} for real-time multiplayer gameplay, evaluating polling versus \textbf{WebSocket-based} communication and implementing custom protocols to balance latency, consistency, and scalability.
     \item Architected a \textbf{modular}, terrain-aware \textbf{game engine} with clear separation between \textbf{physics simulation}, \textbf{collision constraints}, and gameplay rules, enabling extensibility without impacting core engine stability.
     \item Designed backend service boundaries for \textbf{authentication}, \textbf{matchmaking}, and \textbf{gameplay orchestration}, defining interaction contracts and failure-handling strategies, and integrating \textbf{centralized logging} and \textbf{monitoring} to ensure \textbf{reliability} under concurrent sessions.
 \end{highlights}
@@ -140,10 +145,10 @@ Full-Stack Engineer with 3+ years’ experience designing and delivering \textbf
 \textit{Full-stack financial data processing system integrating live banking data with analytics and secure cloud deployment.} \\
 \textbf{Tools: } Flask, Streamlit, Redis, Plaid API, Docker, AWS \\
 \begin{highlights}
-    \item Designed and implemented backend \textbf{APIs} for ingesting, normalizing, and categorizing financial transactions from live banking data sources.
-    \item Built \textbf{analytics pipelines} for expense aggregation, trend analysis, and budget evaluation, ensuring \textbf{data consistency} across user accounts.
-    \item Developed interactive dashboards backed by \textbf{secure cloud deployment}, focusing on data isolation, access control, and operational reliability.
+    \item Designed backend \textbf{REST APIs} to ingest, normalize, and categorize financial transactions from live banking data using Plaid, ensuring \textbf{secure data isolation} per user.
+    \item Built \textbf{analytics pipelines} for expense aggregation and trend analysis, and delivered interactive dashboards via \textbf{secure cloud deployment} on AWS.
 \end{highlights}
+
 \vspace{-0.2cm}
 
 
