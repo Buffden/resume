@@ -1,16 +1,15 @@
 \documentclass[10pt, letterpaper]{article}
 
-% Packages:
+% --- Packages ---
 \usepackage[
     ignoreheadfoot,
-    top=1 cm,
-    bottom=1 cm,
-    left=1.2 cm,
-    right=1.2 cm,
-    footskip=1.0 cm,
+    top=1cm,
+    bottom=0.5cm,
+    left=0.5cm,
+    right=0.5cm,
+    footskip=0.5cm,
 ]{geometry}
 \usepackage{titlesec}
-\usepackage{tabularx}
 \usepackage{array}
 \usepackage[dvipsnames]{xcolor}
 \definecolor{primaryColor}{RGB}{0, 0, 0}
@@ -24,49 +23,32 @@
     colorlinks=true,
     urlcolor=primaryColor
 ]{hyperref}
-\usepackage[pscoord]{eso-pic}
-\usepackage{calc}
-\usepackage{bookmark}
-\usepackage{lastpage}
+\usepackage[scaled=0.92]{helvet}
+\renewcommand\familydefault{\sfdefault}
 \usepackage{changepage}
 \usepackage{paracol}
-\usepackage{ifthen}
-\usepackage{needspace}
-\usepackage{iftex}
 
-\ifPDFTeX
-    \input{glyphtounicode}
-    \pdfgentounicode=1
-    \usepackage[T1]{fontenc}
-    \usepackage[utf8]{inputenc}
-    \usepackage{lmodern}
-\fi
-
-\usepackage{charter}
-
+% --- Page setup ---
 \raggedright
-\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
 \pagestyle{empty}
 \setcounter{secnumdepth}{0}
-\setlength{\parindent}{0pt}
-\setlength{\topskip}{0pt}
-\setlength{\columnsep}{0.15cm}
 \pagenumbering{gobble}
 
-\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
-\titlespacing{\section}{-1pt}{0.3 cm}{0.2 cm}
+% --- Section formatting ---
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.3cm}{0.2cm}
 
+% --- Lists ---
 \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
-\newenvironment{highlights}{\begin{itemize}[topsep=0.08 cm, parsep=0.06 cm, partopsep=0pt, itemsep=2pt, leftmargin=10pt]}{\end{itemize}}
-\newenvironment{onecolentry}{\begin{adjustwidth}{0 cm}{0 cm}}{\end{adjustwidth}}
-\newenvironment{twocolentry}[2][]{\onecolentry\def\secondColumn{#2}\setcolumnwidth{\fill, 4.5 cm}\begin{paracol}{2}}{\switchcolumn \raggedleft \secondColumn\end{paracol}\endonecolentry}
-
+\newenvironment{highlights}{\begin{itemize}[itemsep=1pt, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=10pt]}{\end{itemize}}
+\newenvironment{onecolentry}{
+  \begin{adjustwidth}{0cm}{0cm}
+  \begin{itemize}[itemsep=1pt, parsep=0pt, topsep=0pt, partopsep=0pt, leftmargin=10pt]
+}{
+  \end{itemize}
+  \end{adjustwidth}
+}
 \begin{document}
-
-\newcommand{\AND}{\unskip\cleaders\copy\ANDbox\hskip\wd\ANDbox\ignorespaces}
-\newsavebox\ANDbox
-\sbox\ANDbox{$|$}
-
 % ---------- Header ----------
 \begin{center}
     {\fontsize{25 pt}{25 pt}\selectfont Harshwardhan Patil}
@@ -89,35 +71,28 @@
   \textit{#3} \\
   #4
 }
-
+\vspace{-0.5cm}
+{\small
 % ---------- Overview ----------
 \section{Overview}
-\textbf{Frontend Engineer (Angular)} with 3+ years’ experience building \textbf{scalable, accessible, and high-performance} web applications. Specialized in \textbf{Angular (CLI, Material, RxJS)}, \textbf{D3.js} data visualization, reusable UI systems, and \textbf{performance/accessibility} improvements (ARIA). Solid grounding in \textbf{API integration} (REST/JSON), \textbf{secure auth} (JWT, CORS, CSRF), and lean \textbf{CI/CD} to ship reliably (\textbf{50+ zero-rollback} releases). Mentors engineers and aligns implementations with clean frontend architecture.
-
-% ---------- Education ----------
-\section{Education}
-\educationentry
-    {University of Texas at Arlington}
-    {Expected May 2026}
-    {Master’s in Software Engineering}
-    {
-    \begin{highlights}
-        \item System Design, Secure Programming, Software Testing, Cloud Computing, Machine Learning, Distributed Systems
-    \end{highlights}
-    }
+Frontend Engineer with \textbf{3+ years of experience} designing and delivering \textbf{large-scale, data-intensive web applications}. Strong focus on \textbf{component-driven UI architecture}, client-side state management, performance optimization, and \textbf{accessibility-first development (WCAG/ARIA)}. Experienced in building reusable frontend systems, interactive dashboards, and complex data visualizations while collaborating closely with cross-functional teams.
 
 % ---------- Technical Skills ----------
 \section{Technical Skills}
 \begin{onecolentry}
-    \item \textbf{Languages:} TypeScript, JavaScript, HTML5, CSS3/SCSS, Python
-    \item \textbf{Frameworks \& Libraries:} Angular (CLI, Material, RxJS), D3.js/Chart.js, NgRx or RxJS state patterns, Angular CDK
-    \item \textbf{Architecture \& Patterns:} Lazy loading, route guards, smart/presentational split, reactive forms, reusable design systems, accessibility (WCAG/ARIA), performance tuning (change detection, bundle splitting)
-    \item \textbf{Testing \& Quality:} Jasmine/Karma, Jest, Cypress/Playwright, Storybook, SonarQube/ESLint, Chrome DevTools/Performance
-    \item \textbf{API \& Security:} REST/JSON, interceptors, JWT/OAuth2 client flows, CORS/CSRF handling, HTTPS, error/retry/backoff, caching/ETag usage
-    \item \textbf{Tooling \& Build:} Angular CLI, Webpack/Vite awareness, Nx (monorepo), Docker for FE, CI/CD (GitHub Actions/GitLab/Jenkins), feature flags
-    \item \textbf{Observability:} Web vitals monitoring, structured logging, Sentry or similar for FE error tracking
-    \item \textbf{Delivery Targets:} Nginx static hosting, CDN caching, API gateways; AWS S3/CloudFront for static assets (light cloud)
+  \item \textbf{Languages \& Markup:} TypeScript, JavaScript (ES6+), HTML5, CSS3, SCSS
+  
+  \item \textbf{Frontend \& State:} Angular (CLI, Material, CDK), RxJS, Reactive Forms, Routing, Lazy Loading, observable-based state, async orchestration, caching
+  
+  \item \textbf{UI Architecture \& Visualization:} Component-driven design, reusable UI systems, design systems, smart/presentational separation, D3.js, Chart.js
+  
+  \item \textbf{Performance \& Accessibility:} Change detection optimization, bundle splitting, Lighthouse, WCAG, ARIA
+  
+  \item \textbf{Testing \& Integration:} Jasmine, Jest, Cypress/Playwright, Storybook, REST/JSON, interceptors, pagination, error handling
+  
+  \item \textbf{Tooling \& Delivery:} Angular CLI, Nx (basic), Docker (frontend), GitHub Actions, Jenkins, SonarQube
 \end{onecolentry}
+
 
 % ---------- Experience ----------
 \newcommand{\experienceentry}[4]{%
@@ -128,73 +103,86 @@
 
 \section{Professional Experience}
 
-\experienceentry
-  {Software Engineer}
-  {Aug 2023 -- Aug 2024}
-  {Clarivate Analytics -- Bangalore, India}
-  {
-    \begin{highlights}
-                \item \textbf{Reusable UI Platform:} Led a rebuild of the shared Angular table system (dynamic cols, saved prefs, chips, Excel export) to \textbf{cut duplicate UI code by 80\%+} and speed new feature delivery.
-                \item \textbf{Filtering UX Upgrade:} Designed a two-pane filter flow with interdependent rules, revert-to-last state, chips, and clear-all to lift task completion and discoverability.
-                \item \textbf{Chart Library Standardization:} Authored reusable \textbf{D3.js} bar/stacked/line/pie components with pluggable legends/tooltips/labels, unifying charts across modules and reducing maintenance.
-                \item \textbf{Large-Report Exports:} Shipped PPT/PDF exports with \textbf{RxJS forkJoin} + streaming to keep long-running reports under timeouts and improve stakeholder consumption.
-                \item \textbf{Quality \& Release Cadence:} Held \textbf{90\%+} FE coverage (Jasmine, SonarQube) and shipped \textbf{50+ zero-rollback} releases via lean CI/CD (Docker, Jenkins) while aligning API contracts with BE.
-                \item \textbf{Mentorship:} Pair-led and reviewed with 2 junior Angular devs, \textbf{doubling} their sprint throughput and raising code quality.
-    \end{highlights}
-  }
-\vspace{0.3cm}
-\experienceentry
-  {Associate Software Engineer}
-  {Aug 2021 -- Jul 2023}
-  {Clarivate Analytics -- Bangalore, India}
-  {
-    \begin{highlights}
-                \item \textbf{Search/Reporting UI:} Delivered Angular D3.js charts and reusable tables wired to REST APIs for advanced search/reporting, accelerating feature delivery.
-                \item \textbf{Performance Tuning:} Introduced lazy-loaded modules and immutability patterns to \textbf{cut initial load times by 30\%} and stabilize state.
-                \item \textbf{Accessibility Lift:} Added ARIA roles, semantic HTML, and keyboard navigation to raise Lighthouse a11y to \textbf{95+}.
-                \item \textbf{Client Security:} Implemented JWT/CORS/CSRF-safe flows, input sanitization, and error patterns to shrink incident risk.
-                \item \textbf{Design System Adoption:} Standardized chart/filter modules with docs, adopted across \textbf{5+} modules, cutting onboarding time by \textbf{50\%}.
-                \item \textbf{Quality Baseline:} Pushed FE coverage to \textbf{90\%+} (Jasmine, Protractor) and trimmed production bugs by \textbf{25\%}.
-    \end{highlights}
-  }
+\textbf{Software Engineer, Clarivate Analytics} -- Bangalore, India \hfill \textit{Aug 2023 -- Aug 2024} \\
+\begin{highlights}
+
+\item Architected a reusable Angular table framework with dynamic columns, filters, preferences, and exports, adopted across teams, reducing UI duplication \textbf{80\%+}.
+
+\item Built reusable D3.js chart components (bar, line, stacked) to power consistent analytics views across products and simplify frontend maintenance workflows.
+
+\item Implemented client-side filtering service with dependent rules, reversible state, and server-backed pagination for data-heavy search and reporting use cases.
+
+\item Coordinated RxJS-based async frontend data flows to support large PPT and PDF exports with stable performance and correct aggregation.
+
+\item Designed modular Angular components with clear separation of presentation and logic, improving maintainability and enabling faster iteration across features.
+
+\item Integrated frontend modules with REST APIs using interceptors and centralized error handling, ensuring consistent data flow and resilient UI behavior.
+
+\item Collaborated closely with product and backend teams to translate complex requirements into intuitive, data-driven frontend workflows.
+
+\item Maintained frontend quality through unit testing, static analysis, and code reviews, enabling safe iteration and reliable feature delivery.
+
+\end{highlights}
+
+
+\vspace{0.2cm}
+
+\textbf{Associate Software Engineer, Clarivate Analytics} -- Bangalore, India \hfill \textit{Aug 2021 -- Jul 2023} \\
+\begin{highlights}
+
+\item Developed data-driven frontend features including advanced search views, reusable tables, and interactive charts integrated with REST APIs for scale.
+
+\item Built responsive Angular UI components following reusable patterns, ensuring consistent behavior across reporting and analytics modules for performance.
+
+\item Migrated legacy UI components to Angular, rebuilding \textbf{5+} core business flows with a modular, maintainable frontend architecture with tests.
+
+\item Optimized frontend rendering and state management by reducing re-renders and improving data fetching, achieving \textbf{20--30\%} faster page loads in production.
+
+\item Improved accessibility using semantic HTML, ARIA roles, and keyboard navigation, achieving Lighthouse accessibility scores above \textbf{95} and usability.
+
+\item Assisted in integrating frontend features with backend services, handling loading states, errors, and edge cases in data-heavy views and monitoring.
+
+\item Participated in code reviews and team discussions, improving frontend code quality and adherence to shared UI design standards and guidelines.
+
+\item Established a frontend testing baseline using Jasmine and Protractor, reducing regressions and post-release defects by approximately \textbf{25\%}, and automation.
+
+\end{highlights}
+
+\vspace{-0.2cm}
+% ---------- Education ----------
+\section{Education}
+\textbf{University of Texas at Arlington}\hspace{3.3em}\textit{Master’s in Software Engineering} \hfill \textit{May 2026} \\
+\textbf{BMS College of Engineering, India}\hspace{2em}\textit{Bachelor’s in Mechanical Engineering} \hfill \textit{July 2021} \\
+\vspace{-0.2cm}
 
 % ---------- Projects ----------
 \section{Projects}
-
 \textbf{Employee Management System (EMS)}\ \href{https://github.com/Buffden/employee-management-system}{\faGithub}\hspace{0.4em}\href{https://ems.buffden.com/}{\faGlobe} \hfill \textit{Dec 2024 -- Nov 2025} \\
-\textit{Enterprise-grade full-stack employee management platform with real-time metrics and automated cloud deployment.} \\
-\textbf{Tools: } Spring Boot, Angular, PostgreSQL, AWS (EC2, RDS, S3, Secrets Manager), Docker, GitHub Actions, Jenkins \\
+\textit{Enterprise-grade web application for managing employees, departments, and organizational data.} \\
+\textbf{Tools: } Angular, Spring Boot, PostgreSQL, AWS, Docker \\
 \begin{highlights}
-  \item Engineered RESTful Spring Boot APIs for multi-entity management (employees, departments, projects, tasks, locations) with pagination, filtering, and search.
-  \item Developed a unified Angular frontend with responsive UI and integrated dashboard metrics.
-  \item Architected an Nginx API gateway to serve the frontend and proxy backend services.
-  \item Containerized services with Docker Compose for consistent dev/test/prod environments.
-  \item Automated CI/CD via GitHub Actions and Jenkins to build, test, publish images, and deploy to AWS.
-  \item Deployed backend on AWS EC2 with PostgreSQL on RDS, secured via Secrets Manager and firewall rules.
-  \item Integrated automated test suites into CI to enforce quality and reduce regressions.
+  \item Architected a \textbf{modular Angular} frontend with reusable tables, filters, and dashboards to manage large datasets and reduce UI~duplication.
+  \item Implemented scalable data workflows (client-side pagination, server filtering, sorting) and optimized fetch aggregation to support interactive data~exploration.
+  \item Delivered responsive dashboards and production-ready CI/CD pipelines for consistent builds, deployments, and robust operational observability.
 \end{highlights}
+
 \vspace{0.3cm}
 
-\textbf{Battle Arena – Multiplayer Artillery Game Platform}\ \href{https://github.com/Buffden/battle-arena}{\faGithub} \hfill \textit{May 2024 -- Present} \\
-\textit{Browser-based artillery game platform focused on modular engine architecture, terrain-aware physics, and extensible multiplayer foundations.} \\
-\textbf{Tools: } Angular, Phaser 3, Spring Boot, Node.js, MongoDB, WebSockets, Docker, AWS \\
-\begin{highlights}
-  \item Designed modular backend services (auth, matchmaking, leaderboard, gameplay orchestration) with separation between engine logic and platform services.
-  \item Integrated Phaser 3 with Angular 17 using standalone components for terrain boundaries, slope-aware movement, and collision-constrained navigation.
-  \item Built real-time communication primitives in Node.js/WebSockets to support turn-based multiplayer sync and matchmaking.
-  \item Containerized frontend, game engine, and backend via Docker Compose for reproducible local dev and cloud-ready deployment on AWS.
-\end{highlights}
-\vspace{0.3cm}
+\textbf{Battle Arena – Browser-Based Multiplayer Game Platform}
+\ \href{https://github.com/Buffden/battle-arena}{\faGithub}
+\hfill \textit{May 2024 -- Present} \\
 
-\textbf{AI-Powered Personal Finance Manager}\ \href{https://github.com/Buffden/AI-Powered-Personal-Finance-Manager}{\faGithub} \hfill \textit{Feb 2025 -- Apr 2025} \\
-\textit{Full-stack personal finance platform integrating live banking data and AI-driven insights for budgeting and planning.} \\
-\textbf{Tools: } Flask, Streamlit, Redis, Plaid API, Docker, AWS \\
+\textit{Browser-based multiplayer game platform focused on modular frontend architecture, real-time UI updates, and interactive gameplay rendering.} \\
+
+\textbf{Tools: } Angular, Phaser 3, TypeScript, RxJS, Node.js, WebSockets, Docker, AWS \\
+
 \begin{highlights}
-  \item Built backend APIs in Flask for transaction ingestion, categorization, budgeting logic, and analytics using live banking data via Plaid.
-  \item Implemented AI-driven insights for spend trends, predictions, and personalized recommendations.
-  \item Designed interactive dashboards for transaction analytics, budget tracking, and alerts; packaged with Docker for deployment readiness.
-  \item Planned cloud deployment on AWS for scalability and production readiness with Redis for caching/queues.
+  \item Integrated \textbf{Phaser 3} with Angular to build a frontend architecture that separates engine logic from UI, enabling iteration and smooth rendering.
+  \item Implemented real-time sync using RxJS and WebSockets to coordinate player actions, game events, and UI updates with low-latency, consistent state.
+  \item Engineered terrain-aware movement, collision visualization, and Docker deployments for reproducible development and scalable hosting.
 \end{highlights}
+
+\vspace{0.3cm}
 
 % ---------- Certifications ----------
 % \section{Certifications}
@@ -204,5 +192,5 @@
 %     \item AWS Certified Cloud Practitioner (2025)
 %     \item Oracle Certified Professional: Java SE 17 Developer (2025)
 % \end{highlights}
-
+} % end small text group
 \end{document}
