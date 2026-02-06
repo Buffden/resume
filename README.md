@@ -11,33 +11,44 @@ I recommend using the **LaTeX Workshop** extension for VS Code. It provides an e
 
 ### Key Features
 
-**Build LaTeX to PDF automatically on save:**
+#### Build LaTeX to PDF automatically on save
+
 ![Build process](https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/build.gif)
 
-**View PDF on-the-fly:**
+#### View PDF on-the-fly
+
 ![Preview feature](https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/preview.gif)
 
-**Direct and reverse SyncTeX - Click to jump between source and PDF:**
+#### Direct and reverse SyncTeX - Click to jump between source and PDF
+
 ![SyncTeX](https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/synctex.gif)
 
-**Intellisense for citations and references:**
+#### Intellisense for citations and references
+
 ![Intellisense](https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/ref.gif)
 
-**LaTeX log parser with automatic error reporting:**
+#### LaTeX log parser with automatic error reporting
+
 ![Error reporting](https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/errors.png)
 
-**Linting support:**
+#### Linting support
+
 ![Chktex linting](https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/chktex.gif)
 
-**Snippets and shortcuts:**
+#### Snippets and shortcuts
+
 ![Subparagraph snippet](https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/subparagraph.gif)
 
-**Wrap text with LaTeX commands:**
+#### Wrap text with LaTeX commands
+
 ![Wrap command](https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/wrap.gif)
 
-**Greek letters and mathematical helpers:**
+#### Greek letters and mathematical helpers
+
 ![Greek letters](https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/greek%20letter.gif)
+
 ![Frac shortcut](https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/frac.gif)
+
 ![Int shortcut](https://github.com/James-Yu/LaTeX-Workshop/raw/master/demo_media/int.gif)
 
 ## Files
