@@ -69,10 +69,7 @@ After running `pdflatex` you may need to run it a second time for references to 
 
 ## View PDF on macOS
 
-- **Using Preview:** open the generated PDF (e.g. `open frontend-resume.pdf`) to view in macOS Preview.
 - **Using VS Code:** the popular extension `LaTeX Workshop` provides build commands and an integrated PDF viewer. If you use VS Code on macOS, install `James-Yu.latex-workshop` and use the sidebar or the `LaTeX Workshop: Build LaTeX project` command to compile and preview.
-
-If you use a different LaTeX extension on macOS, tell me its name and I'll update this README to mention it specifically.
 
 ## Clean
 
