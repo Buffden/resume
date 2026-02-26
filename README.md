@@ -79,29 +79,3 @@ If you use a different LaTeX extension on macOS, tell me its name and I'll updat
 ```bash
 rm -f *.aux *.log *.fdb_latexmk *.fls *.synctex.gz
 ```
-
-## Embedding GIFs in this README
-
-You can embed animated GIFs in `README.md` either by linking to an externally hosted image or by adding the GIF file to this repo and referencing it locally. Examples:
-
-- External link (hotlinking):
-
-```markdown
-![Resume preview GIF](https://example.com/path/to/animation.gif)
-```
-
-- Local file (recommended):
-
-1. Create an `images/` folder in the repo, add the GIF (for example `images/resume-preview.gif`).
-2. Reference it in the README:
-
-```markdown
-[![Resume preview](images/resume-preview.gif)](images/resume-preview.gif)
-```
-
-Notes:
-- Hotlinking to images on other sites works if the image is publicly hosted, but availability and longevity depend on the remote host.
-- Some sites disallow hotlinking or have licensing restrictions; prefer adding the GIF to your repo (or a reliable CDN) if you control the content.
-- If the GIF is large, consider resizing/compressing it so GitHub renders quickly; for very large binary assets consider Git LFS.
-
-If you want, I can add the screenshot/gif you uploaded into `images/resume-preview.png` or `images/resume-preview.gif` and update the README to show it.
