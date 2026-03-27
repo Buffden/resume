@@ -122,13 +122,23 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
 % --- Projects ---
 \section{Projects}
 
+\textbf{TinyURL — URL Shortener} \href{https://github.com/Buffden/tinyurl-api}{\faGithub}\hspace{0.4em}\href{https://tinyurl.buffden.com/}{\faGlobe} \hfill \textit{Jan 2025 – Present} \\
+\textit{Production-grade URL shortening service with QR code generation, link expiry, and a fully automated cloud deployment pipeline.} \\
+\textbf{Tools: } Spring Boot, Angular, PostgreSQL, AWS (EC2, RDS, S3, CloudFront, ALB), Docker, Cloudflare, GitHub Actions \\
+\begin{highlights}
+    \item Designed and deployed a \textbf{distributed architecture} separating SPA (S3 + CloudFront) from the REST API (EC2 + ALB), with \textbf{Cloudflare} handling DNS, SSL termination, and DDoS protection across both domains.
+    \item Built \textbf{REST APIs} for URL shortening with configurable \textbf{TTL-based expiry}, short-code generation, and redirect resolution, backed by \textbf{PostgreSQL on RDS} in a private VPC subnet.
+    \item Implemented a \textbf{CI/CD pipeline} via GitHub Actions to automate production builds, S3 sync, and \textbf{CloudFront cache invalidation} on every push to main.
+\end{highlights}
+\vspace{0.2cm}
+
+
 \textbf{Employee Management System} \href{https://github.com/Buffden/employee-management-system}{\faGithub}\hspace{0.4em}\href{https://ems.buffden.com/}{\faGlobe} \hfill \textit{Dec 2024 – Nov 2025} \\
 \textit{Enterprise-grade system for managing employees, teams, projects, and access control with production-grade deployment and observability.} \\
 \textbf{Tools: } Spring Boot, Angular, PostgreSQL, AWS (EC2, RDS, S3, Secrets Manager), Redis, Docker, GitHub Actions, Jenkins \\
 \begin{highlights}
     \item Designed and built a scalable backend system for employee, project, and access management, applying \textbf{system design} principles to enforce \textbf{RBAC}, data isolation, and deployment automation.
     \item Implemented high-performance \textbf{REST APIs} for multi-entity services (employees, departments, projects, tasks) with pagination, filtering, and search, optimized for \textbf{scalability} and \textbf{API latency}.
-    \item Integrated \textbf{dashboards}, \textbf{centralized logging}, and \textbf{monitoring} into backend services to ensure data consistency, traceability, and reliable operation in production environments.
 \end{highlights}
 \vspace{0.2cm}
 
@@ -138,16 +148,6 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
 \begin{highlights}
     \item Designed a \textbf{distributed backend architecture} for real-time multiplayer gameplay, evaluating polling versus \textbf{WebSocket-based} communication and implementing custom protocols to balance latency, consistency, and scalability.
     \item Architected a \textbf{modular}, terrain-aware \textbf{game engine} with clear separation between \textbf{physics simulation}, \textbf{collision constraints}, and gameplay rules, enabling extensibility without impacting core engine stability.
-\end{highlights}
-
-\vspace{0.2cm}
-
-\textbf{AI-Powered Personal Finance Manager} \href{https://github.com/Buffden/AI-Powered-Personal-Finance-Manager}{\faGithub} \hfill \textit{Feb 2025 – Apr 2025} \\
-\textit{Full-stack financial data processing system integrating live banking data with analytics and secure cloud deployment.} \\
-\textbf{Tools: } Flask, Streamlit, Redis, Plaid API, Docker, AWS \\
-\begin{highlights}
-    \item Designed backend \textbf{REST APIs} to ingest, normalize, and categorize financial transactions from live banking data using Plaid, ensuring \textbf{secure data isolation} per user.
-    \item Built \textbf{analytics pipelines} for expense aggregation and trend analysis, and delivered interactive dashboards via \textbf{secure cloud deployment} on AWS.
 \end{highlights}
 
 \vspace{-0.2cm}
