@@ -75,8 +75,8 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
 % --- Technical Skills ---
 \section{Technical Skills}
 \begin{onecolentry}
-   \item \textbf{Languages \& Frameworks:} Java, TypeScript, JavaScript, SQL, Python, Spring Boot, Angular, Node.js
-\item \textbf{Cloud \& DevOps:} AWS (EC2, ECS, S3, RDS, Secrets Manager), Docker, Jenkins, GitHub Actions, Nginx, CI/CD
+   \item \textbf{Languages \& Frameworks:} Java, TypeScript, JavaScript, SQL, Spring Boot, Angular, Node.js
+\item \textbf{Cloud \& DevOps:} AWS (EC2, ECS, S3, RDS, CloudFront, ALB, Secrets Manager), Docker, Jenkins, GitHub Actions, Nginx, Cloudflare, CI/CD
 \item \textbf{Databases:} PostgreSQL, Redis, MySQL, MongoDB, Schema design, Database indexing, Query optimization, Large dataset handling
 \item \textbf{Testing \& Security:} JUnit, Jasmine, SonarQube, Postman, JWT, RBAC, HTTPS/TLS, CORS, CSRF/XSS protection
 \item \textbf{Design \& Architecture:} System Design, Design Patterns, SOLID principles, Distributed backend services, Concurrency handling, Session management
@@ -122,12 +122,13 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
 % --- Projects ---
 \section{Projects}
 
-\textbf{TinyURL — URL Shortener} \href{https://github.com/Buffden/tinyurl-api}{\faGithub}\hspace{0.4em}\href{https://tinyurl.buffden.com/}{\faGlobe} \hfill \textit{Jan 2025 – Present} \\
+\textbf{TinyURL — URL Shortener} \href{https://github.com/Buffden/tinyurl-api}{\faGithub}\hspace{0.4em}\href{https://tinyurl.buffden.com/}{\faGlobe} \hfill \textit{Jan 2026 – Present} \\
 \textit{Production-grade URL shortening service with QR code generation, link expiry, and a fully automated cloud deployment pipeline.} \\
 \textbf{Tools: } Spring Boot, Angular, PostgreSQL, AWS (EC2, RDS, S3, CloudFront, ALB), Docker, Cloudflare, GitHub Actions \\
 \begin{highlights}
     \item Designed and deployed a \textbf{distributed architecture} separating SPA (S3 + CloudFront) from the REST API (EC2 + ALB), with \textbf{Cloudflare} handling DNS, SSL termination, and DDoS protection across both domains.
-    \item Built \textbf{REST APIs} for URL shortening with configurable \textbf{TTL-based expiry}, short-code generation, and redirect resolution, backed by \textbf{PostgreSQL on RDS} in a private VPC subnet.
+    \item Hardened the API layer with \textbf{nginx-level rate limiting} (per-IP limits on URL creation, redirects, and connections), request body constraints, and security headers (HSTS, X-Frame-Options, CSP), blocking common scanner User-Agents and vulnerability scan paths before requests reach the application.
+    \item Built \textbf{REST APIs} for URL shortening with configurable \textbf{TTL-based expiry}, short-code generation, and redirect resolution, backed by \textbf{PostgreSQL on RDS}.
     \item Implemented a \textbf{CI/CD pipeline} via GitHub Actions to automate production builds, S3 sync, and \textbf{CloudFront cache invalidation} on every push to main.
 \end{highlights}
 \vspace{0.2cm}
@@ -142,7 +143,7 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
 \end{highlights}
 \vspace{0.2cm}
 
-\textbf{Battle Arena – Real-Time Multiplayer Platform} \href{https://github.com/Buffden/battle-arena}{\faGithub} \hfill \textit{May 2024 – Present} \\
+\textbf{Battle Arena – Real-Time Multiplayer Platform} \href{https://github.com/Buffden/battle-arena}{\faGithub} \hfill \textit{May 2025 – Present} \\
 \textit{Real-time multiplayer system featuring a modular game engine, physics-based simulation, and distributed backend services.} \\
 \textbf{Tools: } Angular, Phaser 3, Spring Boot, Node.js, MongoDB, WebSockets, Docker, AWS \\
 \begin{highlights}
