@@ -127,7 +127,8 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
 \textbf{Tools: } Spring Boot, Angular, PostgreSQL, AWS (EC2, RDS, S3, CloudFront, ALB), Docker, Cloudflare, GitHub Actions \\
 \begin{highlights}
     \item Designed and deployed a \textbf{distributed architecture} separating SPA (S3 + CloudFront) from the REST API (EC2 + ALB), with \textbf{Cloudflare} handling DNS, SSL termination, and DDoS protection across both domains.
-    \item Built \textbf{REST APIs} for URL shortening with configurable \textbf{TTL-based expiry}, short-code generation, and redirect resolution, backed by \textbf{PostgreSQL on RDS} in a private VPC subnet.
+    \item Hardened the API layer with \textbf{nginx-level rate limiting} (per-IP limits on URL creation, redirects, and connections), request body constraints, and security headers (HSTS, X-Frame-Options, CSP), blocking common scanner User-Agents and vulnerability scan paths before requests reach the application.
+    \item Built \textbf{REST APIs} for URL shortening with configurable \textbf{TTL-based expiry}, short-code generation, and redirect resolution, backed by \textbf{PostgreSQL on RDS}.
     \item Implemented a \textbf{CI/CD pipeline} via GitHub Actions to automate production builds, S3 sync, and \textbf{CloudFront cache invalidation} on every push to main.
 \end{highlights}
 \vspace{0.2cm}
