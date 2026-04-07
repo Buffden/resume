@@ -76,7 +76,7 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
 \section{Technical Skills}
 \begin{onecolentry}
    \item \textbf{Languages \& Frameworks:} Java, TypeScript, JavaScript, SQL, Spring Boot, Angular, Node.js
-\item \textbf{Cloud \& DevOps:} AWS (EC2, ECS, S3, RDS, CloudFront, ALB, Secrets Manager), Docker, Jenkins, GitHub Actions, Nginx, Cloudflare, CI/CD
+\item \textbf{Cloud \& DevOps:} AWS (EC2, ECS, S3, RDS, CloudFront, ALB, Secrets Manager, Lambda), Docker, Jenkins, GitHub Actions, Nginx, Cloudflare, CI/CD
 \item \textbf{Databases:} PostgreSQL, Redis, MySQL, MongoDB, Schema design, Database indexing, Query optimization, Large dataset handling
 \item \textbf{Testing \& Security:} JUnit, Jasmine, SonarQube, Postman, JWT, RBAC, HTTPS/TLS, CORS, CSRF/XSS protection
 \item \textbf{Design \& Architecture:} System Design, Design Patterns, SOLID principles, Distributed backend services, Concurrency handling, Session management
@@ -122,19 +122,20 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
 % --- Projects ---
 \section{Projects}
 
-\textbf{TinyURL — URL Shortener} \href{https://github.com/Buffden/tinyurl-api}{\faGithub}\hspace{0.4em}\href{https://tinyurl.buffden.com/}{\faGlobe} \hfill \textit{Jan 2026 – Present} \\
+\textbf{TinyURL — URL Shortener} \href{https://github.com/Buffden/tinyurl-api}{\faGithub}\hspace{0.4em}\href{https://tinyurl.buffden.com/}{\faGlobe} \hfill \textit{Feb 2026 – Mar 2026} \\
 \textit{Production-grade URL shortening service with QR code generation, link expiry, and a fully automated cloud deployment pipeline.} \\
-\textbf{Tools: } Spring Boot, Angular, PostgreSQL, AWS (EC2, RDS, S3, CloudFront, ALB), Docker, Cloudflare, GitHub Actions \\
+\textbf{Tools: } Spring Boot, Angular, PostgreSQL, AWS (EC2, RDS, S3, CloudFront, ALB), Docker, Cloudflare, Lambda, EventBridge, SNS, SQS DLQ, CloudWatch \\
 \begin{highlights}
     \item Designed and deployed a \textbf{distributed architecture} separating SPA (S3 + CloudFront) from the REST API (EC2 + ALB), with \textbf{Cloudflare} handling DNS, SSL termination, and DDoS protection across both domains.
     \item Hardened the API layer with \textbf{nginx-level rate limiting} (per-IP limits on URL creation, redirects, and connections), request body constraints, and security headers (HSTS, X-Frame-Options, CSP), blocking common scanner User-Agents and vulnerability scan paths before requests reach the application.
+    \item Designed serverless infrastructure scheduler — reducing monthly EC2/RDS costs by ~52\% with full observability and zero operational overhead.
     \item Built \textbf{REST APIs} for URL shortening with configurable \textbf{TTL-based expiry}, short-code generation, and redirect resolution, backed by \textbf{PostgreSQL on RDS}.
     \item Implemented a \textbf{CI/CD pipeline} via GitHub Actions to automate production builds, S3 sync, and \textbf{CloudFront cache invalidation} on every push to main.
 \end{highlights}
 \vspace{0.2cm}
 
 
-\textbf{Employee Management System} \href{https://github.com/Buffden/employee-management-system}{\faGithub}\hspace{0.4em}\href{https://ems.buffden.com/}{\faGlobe} \hfill \textit{Dec 2024 – Nov 2025} \\
+\textbf{Employee Management System} \href{https://github.com/Buffden/employee-management-system}{\faGithub}\hspace{0.4em}\href{https://ems.buffden.com/}{\faGlobe} \hfill \textit{Dec 2024 – May 2025} \\
 \textit{Enterprise-grade system for managing employees, teams, projects, and access control with production-grade deployment and observability.} \\
 \textbf{Tools: } Spring Boot, Angular, PostgreSQL, AWS (EC2, RDS, S3, Secrets Manager), Redis, Docker, GitHub Actions, Jenkins \\
 \begin{highlights}
@@ -147,7 +148,7 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
 \textit{Real-time multiplayer system featuring a modular game engine, physics-based simulation, and distributed backend services.} \\
 \textbf{Tools: } Angular, Phaser 3, Spring Boot, Node.js, MongoDB, WebSockets, Docker, AWS \\
 \begin{highlights}
-    \item Designed a \textbf{distributed backend architecture} for real-time multiplayer gameplay, evaluating polling versus \textbf{WebSocket-based} communication and implementing custom protocols to balance latency, consistency, and scalability.
+    \item Built a distributed multiplayer distributed backend architecture, evaluating polling vs WebSockets and custom protocols for latency, consistency, and scale.
     \item Architected a \textbf{modular}, terrain-aware \textbf{game engine} with clear separation between \textbf{physics simulation}, \textbf{collision constraints}, and gameplay rules, enabling extensibility without impacting core engine stability.
 \end{highlights}
 
