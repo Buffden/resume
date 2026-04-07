@@ -2,6 +2,8 @@
 
 This repo keeps multiple versions of my resume in one place, so every change is tracked and can be pulled back anytime. It also ensures a cloud-hosted resume is always available.
 
+This resume is also rendered in my portfolio: [https://portfolio.buffden.com/#/](https://portfolio.buffden.com/#/).
+
 ## VS Code Extension (Recommended)
 
 I recommend using the **LaTeX Workshop** extension for VS Code. It provides an excellent LaTeX editing experience with build tasks, integrated PDF preview, and many productivity features.
