@@ -30,6 +30,7 @@
 build/
 output/
 dist/
+cover-letter/
 
 # OS generated files
 .DS_Store
