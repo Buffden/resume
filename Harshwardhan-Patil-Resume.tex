@@ -53,7 +53,7 @@
 % --- Header ---
 \begin{center}
     {\fontsize{20pt}{20pt}\selectfont \textbf{Harshwardhan Patil}} \\[6pt]
-    \faMapMarker* Arlington, TX \hspace{1.2em}
+    \faMapMarker* Houston, TX \hspace{1.2em}
     \faEnvelope\ \href{mailto:work.harshwardhanpatil@gmail.com}{work.harshwardhanpatil@gmail.com} \hspace{1.2em}
     \faPhone\ \href{tel:8179389288}{817-938-9288} \hspace{1.2em}
     \faLinkedin\ \href{https://www.linkedin.com/in/harshwardhanpatil23/}{LinkedIn} \hspace{1.2em}
@@ -77,7 +77,7 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
 \begin{onecolentry}
    \item \textbf{Languages \& Frameworks:} Java, TypeScript, JavaScript, SQL, Spring Boot, Angular, Node.js
 \item \textbf{Cloud \& DevOps:} AWS (EC2, ECS, S3, RDS, CloudFront, ALB, Secrets Manager, Lambda), Docker, Jenkins, GitHub Actions, Nginx, Cloudflare, CI/CD
-\item \textbf{Databases:} PostgreSQL, Redis, MySQL, MongoDB, Schema design, Database indexing, Query optimization, Large dataset handling
+\item \textbf{Databases:} PostgreSQL, Redis, MySQL, Neo4j, Elasticsearch, MongoDB, Schema design, Database indexing, Query optimization, Caching strategies
 \item \textbf{Testing \& Security:} JUnit, Jasmine, SonarQube, Postman, JWT, RBAC, HTTPS/TLS, CORS, CSRF/XSS protection
 \item \textbf{Design \& Architecture:} System Design, Design Patterns, SOLID principles, Distributed backend services, Concurrency handling, Session management
 
@@ -92,14 +92,13 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
 \begin{highlights}
     \item Designed scalable Spring Boot REST APIs with DTO contracts and standardized error handling, reducing breaking changes by \textbf{30\%} across releases.
     \item Designed distributed backend services handling concurrent user load with controlled multi-session logins and token-based session management.
-    \item Implemented concurrent login flows across backend and frontend, managing session lifecycles, request validation, and SKU-based access control.
     \item Designed and optimized relational schemas and queries for large analytical datasets, using indexing and query tuning to ensure data correctness.
     \item Containerized and built deployment pipelines using Docker, Jenkins, and Spinnaker, supporting \textbf{50+ production releases} with \textbf{zero rollbacks}.
     \item Proactively identified performance bottlenecks in reporting services and optimized API and cache layers, reducing response latency by \textbf{25–35\%}.
     \item Implemented role-based access control across backend and frontend layers, enforcing tiered and region-based data visibility for \textbf{10+ access variants}.
     \item Designed and implemented low-latency typeahead and autocomplete services, improving search response times by \textbf{40\%} over large-scale datasets.
-    \item Architected a highly configurable, reusable Angular table framework adopted across \textbf{3 internal teams}, reducing duplicated frontend effort by \textbf{50\%}.
-    \item Built reusable, aggregation-driven Angular chart components using D3.js, powering \textbf{15+ analytics views} for interactive reporting services.
+    
+    
     \item Led and developed dynamic PPT and PDF export pipelines, generating \textbf{100+ customized reports} with user-selected filters, layouts, and metadata.
 \end{highlights}
 
@@ -111,7 +110,8 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
     \item Improved frontend performance by minimizing unnecessary re-renders and optimizing data-fetching patterns, resulting in \textbf{20\% faster page loads}.
     \item Migrated a legacy client-side component to an Angular 13 application, rebuilding \textbf{5+ core business flows} with a modular architecture.
     \item Implemented secure request-handling mechanisms, including JWT authentication, CORS/CSRF protection, and input validation in \textbf{multiple services}.
-    \item Developed and led reusable Angular UI components, including charts and advanced table views, reused across \textbf{multiple reporting modules} consistently.
+    \item Built reusable, aggregation-driven Angular chart components using D3.js, powering \textbf{15+ analytics views} for interactive reporting services.
+    \item Architected a highly configurable, reusable Angular table framework adopted across \textbf{3 internal teams}, reducing duplicated frontend effort by \textbf{50\%}.
 \end{highlights}
 \vspace{-0.2cm}
 % --- Education ---
@@ -126,7 +126,7 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
 \textit{Production-grade URL shortening service with QR code generation, link expiry, and a fully automated cloud deployment pipeline.} \\
 \textbf{Tools: } Spring Boot, Angular, PostgreSQL, AWS (EC2, RDS, S3, CloudFront, ALB), Docker, Cloudflare, Lambda, EventBridge, SNS, SQS DLQ, CloudWatch \\
 \begin{highlights}
-    \item Designed and deployed a \textbf{distributed architecture} separating SPA (S3 + CloudFront) from the REST API (EC2 + ALB), with \textbf{Cloudflare} handling DNS, SSL termination, and DDoS protection across both domains.
+    \item Deployed \textbf{distributed architecture} separating SPA (S3 + CloudFront) from REST API (EC2 + ALB) with \textbf{Cloudflare} for DNS, SSL, and DDoS protection.
     \item Hardened the API layer with \textbf{nginx-level rate limiting} (per-IP limits on URL creation, redirects, and connections), request body constraints, and security headers (HSTS, X-Frame-Options, CSP), blocking common scanner User-Agents and vulnerability scan paths before requests reach the application.
     \item Designed serverless infrastructure scheduler — reducing monthly EC2/RDS costs by ~52\% with full observability and zero operational overhead.
     \item Built \textbf{REST APIs} for URL shortening with configurable \textbf{TTL-based expiry}, short-code generation, and redirect resolution, backed by \textbf{PostgreSQL on RDS}.
@@ -139,30 +139,29 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
 \textit{Enterprise-grade system for managing employees, teams, projects, and access control with production-grade deployment and observability.} \\
 \textbf{Tools: } Spring Boot, Angular, PostgreSQL, AWS (EC2, RDS, S3, Secrets Manager), Redis, Docker, GitHub Actions, Jenkins \\
 \begin{highlights}
-    \item Designed and built a scalable backend system for employee, project, and access management, applying \textbf{system design} principles to enforce \textbf{RBAC}, data isolation, and deployment automation.
-    \item Implemented high-performance \textbf{REST APIs} for multi-entity services (employees, departments, projects, tasks) with pagination, filtering, and search, optimized for \textbf{scalability} and \textbf{API latency}.
+    \item Designed a multi-tenant backend enforcing \textbf{RBAC} across employees, departments, and projects with data isolation and automated AWS deployment.
+    \item Implemented \textbf{REST APIs} for multi-entity services (employees, departments, projects, tasks) with pagination, filtering, and search for fast data retrieval.
 \end{highlights}
 \vspace{0.2cm}
 
+\textbf{RingNet — Graph-Based Fraud Ring Detection} \href{https://github.com/Buffden/ringnet}{\faGithub} \hfill \textit{May 2026} \\
+\textit{Property graph system detecting fraud networks through shared identifiers and multi-hop traversal — where graph databases outperform relational.} \\
+\textbf{Tools: } Neo4j, Java, Cypher, Docker, Maven, Graph Data Science Library \\
+\begin{highlights}
+    \item Built a \textbf{property graph} across 150 accounts and 430 transactions — fraud ring traversal is constant-complexity in \textbf{Cypher} vs exponential SQL joins.
+    \item Documented graph vs relational trade-off in an \textbf{ADR} with side-by-side SQL vs Cypher comparison, making the architectural decision concrete.
+\end{highlights}
+
+\vspace{0.2cm}
 \textbf{Battle Arena – Real-Time Multiplayer Platform} \href{https://github.com/Buffden/battle-arena}{\faGithub} \hfill \textit{May 2025 – Present} \\
 \textit{Real-time multiplayer system featuring a modular game engine, physics-based simulation, and distributed backend services.} \\
 \textbf{Tools: } Angular, Phaser 3, Spring Boot, Node.js, MongoDB, WebSockets, Docker, AWS \\
 \begin{highlights}
-    \item Built a distributed multiplayer distributed backend architecture, evaluating polling vs WebSockets and custom protocols for latency, consistency, and scale.
-    \item Architected a \textbf{modular}, terrain-aware \textbf{game engine} with clear separation between \textbf{physics simulation}, \textbf{collision constraints}, and gameplay rules, enabling extensibility without impacting core engine stability.
+    \item Built a distributed multiplayer backend architecture, evaluating polling vs WebSockets and custom protocols for latency, consistency, and scale.
+    \item Architected a \textbf{modular}, terrain-aware \textbf{game engine} with clear separation between \textbf{physics simulation}, \textbf{collision constraints}, and gameplay rules.
 \end{highlights}
 
 \vspace{-0.2cm}
-
-
-% --- Certifications ---
-% \section{Certifications}
-% \begin{highlights}
-%     \item AWS Certified Solutions Architect – Associate (2025)
-%     \item AWS Certified Developer – Associate (2025)
-%     \item AWS Certified Cloud Practitioner (2025)
-%     \item Oracle Certified Professional: Java SE 17 Developer (2025)
-% \end{highlights}
 
 } % end small text group
 \end{document}
