@@ -78,7 +78,7 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
    \item \textbf{Languages \& Frameworks:} Java, TypeScript, JavaScript, SQL, Spring Boot, Angular, Node.js
 \item \textbf{Cloud \& DevOps:} AWS (EC2, ECS, S3, RDS, CloudFront, ALB, Secrets Manager, Lambda), Docker, Jenkins, GitHub Actions, Nginx, Cloudflare, CI/CD
 \item \textbf{Databases:} PostgreSQL, Redis, MySQL, Neo4j, Elasticsearch, MongoDB, Schema design, Database indexing, Query optimization, Caching strategies
-\item \textbf{Testing \& Security:} JUnit, Jasmine, SonarQube, Postman, JWT, RBAC, HTTPS/TLS, CORS, CSRF/XSS protection
+\item \textbf{Testing \& Security:} JUnit, Mockito, Jasmine, SonarQube, Postman, JWT, RBAC, HTTPS/TLS, CORS, CSRF/XSS protection
 \item \textbf{Design \& Architecture:} System Design, Design Patterns, SOLID principles, Distributed backend services, Concurrency handling, Session management
 
 \end{onecolentry}
@@ -90,32 +90,32 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
 
 \textbf{Software Engineer, Clarivate Analytics} -- Bangalore, India \hfill \textit{Aug 2023 -- Jul 2024} \\
 \begin{highlights}
-    \item Designed scalable Spring Boot REST APIs with DTO contracts and standardized error handling, reducing breaking changes by \textbf{30\%} across releases.
-    \item Designed distributed backend services handling concurrent user load with controlled multi-session logins and token-based session management.
-    \item Optimized relational schemas and queries for large analytical datasets, using indexing and query tuning to ensure data correctness.
-    \item Containerized and built deployment pipelines using Docker, and Jenkins, supporting \textbf{50+ production releases} with \textbf{zero rollbacks}.
-    \item Proactively identified performance bottlenecks in reporting services and optimized API and cache layers, reducing response latency by \textbf{25–35\%}.
-    \item Implemented role-based access control across backend and frontend layers, enforcing tiered and region-based data visibility for \textbf{10+ access variants}.
-    \item Designed and implemented low-latency typeahead and autocomplete services, improving search response times by \textbf{40\%} over large-scale datasets.
-    \item Led and developed dynamic PPT and PDF export pipelines, generating \textbf{100+ customized reports} with user-selected filters, layouts, and metadata.
+    \item Developed scalable Spring Boot REST APIs with DTO contracts and standardized error handling, reducing breaking changes by \textbf{30\%} across releases.
+    \item Implemented \textbf{JWT}-based multi-session management across backend services, capping concurrent logins at 12 per user with token invalidation on breach.
+    \item Optimized \textbf{PostgreSQL} schemas with composite indexing across reporting and search workloads for drug and patent datasets, cutting full scans.
+    \item Containerized and deployed microservices to \textbf{EC2} using Docker and Jenkins \textbf{CI/CD} pipelines, supporting \textbf{50+ production releases} with \textbf{zero rollbacks}.
+    \item Enforced role-based access control across backend and frontend layers, applying tiered and region-based data visibility for \textbf{10+ access variants}.
+    \item Implemented low-latency \textbf{Elasticsearch}-powered typeahead and autocomplete, improving search response times by \textbf{40\%} over large-scale datasets.
+    \item Developed dynamic PPT and PDF export pipelines using \textbf{PptxGenJS} and \textbf{jsPDF}, generating \textbf{100+ customized reports} with user-selected filters.
+    \item Optimized \textbf{PostgreSQL} query logic for PPT export, decoupling bulk multi-filter chart fetching from single-chart UI rendering to reduce DB round-trips.
+    \item Achieved \textbf{90\%} test coverage using \textbf{JUnit} and \textbf{Mockito} for backend and \textbf{Jasmine} for Angular, covering unit, branch, and line coverage across all modules.
 \end{highlights}
 
 \vspace{0.2cm}
 \textbf{Associate Software Engineer, Clarivate Analytics} -- Bangalore, India \hfill \textit{Aug 2021 -- Jul 2023} \\
 \begin{highlights}
-    \item Integrated Elasticsearch into Spring Boot to provide fast, advanced queries across \textbf{millions of drug records}, reducing search latency by \textbf{30\%}.
-    \item Migrated a legacy client-side component to an Angular 13 application, rebuilding \textbf{5+ core business flows} with a modular architecture.
-    \item Implemented secure request-handling mechanisms, including JWT authentication, CORS/CSRF protection, and input validation in \textbf{multiple services}.
-    \item Optimized frontend rendering and state management for data-heavy views, improving responsiveness of interactive charts and tables by \textbf{20–25\%}.
-    \item Improved frontend performance by minimizing unnecessary re-renders and optimizing data-fetching patterns, resulting in \textbf{20\% faster page loads}.
-    \item Built reusable, aggregation-driven Angular chart components using D3.js, powering \textbf{15+ analytics views} for interactive reporting services.
-    \item Architected a highly configurable, reusable Angular table framework adopted across \textbf{3 internal teams}, reducing duplicated frontend effort by \textbf{50\%}.
+    \item Integrated \textbf{Elasticsearch} into Spring Boot, enabling advanced full-text queries across \textbf{millions of drug records} and reducing search latency by \textbf{30\%}.
+    \item Migrated \textbf{5+ core business flows} from Angular 8 to \textbf{Angular 13}, rebuilding components with a modular architecture and improved state management.
+    \item Built secure request-handling across backend services using \textbf{Spring Security}, \textbf{CORS/CSRF}, and input validation to guard against unauthorized access.
+    \item Improved responsiveness of data-heavy chart and table views by \textbf{20--25\%} through lazy loading, \textbf{RxJS} streams, and Angular lifecycle optimizations.
+    \item Reduced page load times by \textbf{20\%} by applying component-level \textbf{OnPush} change detection and optimizing data-fetching patterns across data-heavy views.
+    \item Built \textbf{D3.js} chart components with grouping and filtering aggregations for \textbf{Angular}, powering \textbf{15+ analytics views} across drug intelligence dashboards.
+    \item Architected a configurable \textbf{Angular} table framework with sorting, pagination, and filters; adopted across \textbf{3 internal teams}, cutting duplication by \textbf{50\%}.
 \end{highlights}
 \vspace{-0.2cm}
 % --- Education ---
 \section{Education}
-\textbf{University of Texas at Arlington}\hspace{3.3em}\textit{Master’s in Software Engineering} \hfill \textit{May 2026} \\
-\textbf{BMS College of Engineering, India}\hspace{2em}\textit{Bachelor’s in Mechanical Engineering} \hfill \textit{July 2021} \\
+\textbf{University of Texas at Arlington}\hspace{3.3em}\textit{Master's in Software Engineering}\hspace{3.3em}\textit{GPA: 3.6 / 4.0} \hfill \textit{May 2026} \\
 \vspace{-0.2cm}
 % --- Projects ---
 \section{Projects}
@@ -125,8 +125,9 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
 \textbf{Tools: } Spring Boot, Angular, PostgreSQL, AWS (EC2, RDS, S3, CloudFront, ALB), Docker, Cloudflare, Lambda, EventBridge, SNS, SQS DLQ, CloudWatch \\
 \begin{highlights}
     \item Deployed \textbf{distributed architecture} separating SPA (S3 + CloudFront) from REST API (EC2 + ALB) with \textbf{Cloudflare} for DNS, SSL, and DDoS protection.
-    \item Hardened the API layer with \textbf{nginx-level rate limiting} (per-IP limits on URL creation, redirects, and connections), request body constraints, and security headers (HSTS, X-Frame-Options, CSP), blocking common scanner User-Agents and vulnerability scan paths before requests reach the application.
-    \item Designed serverless infrastructure scheduler — reducing monthly EC2/RDS costs by ~52\% with full observability and zero operational overhead.
+    \item Hardened the API layer with \textbf{Nginx-level rate limiting}, applying per-IP controls on URL creation, redirects, and active connections to reduce abuse risk.
+    \item Blocked unsafe traffic before application execution using request-size constraints, security headers (\textbf{HSTS, X-Frame-Options, CSP}), and scanner filters.
+    \item Designed serverless infrastructure scheduler — reducing monthly EC2/RDS costs by ~40\% with full observability and zero operational overhead.
     \item Built \textbf{REST APIs} for URL shortening with configurable \textbf{TTL-based expiry}, short-code generation, and redirect resolution, backed by \textbf{PostgreSQL on RDS}.
     \item Implemented a \textbf{CI/CD pipeline} via GitHub Actions to automate production builds, S3 sync, and \textbf{CloudFront cache invalidation} on every push to main.
 \end{highlights}
@@ -135,10 +136,10 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
 
 \textbf{Employee Management System} \href{https://github.com/Buffden/employee-management-system}{\faGithub}\hspace{0.4em}\href{https://ems.buffden.com/}{\faGlobe} \hfill \textit{Dec 2024 – May 2025} \\
 \textit{Enterprise-grade system for managing employees, teams, projects, and access control with production-grade deployment and observability.} \\
-\textbf{Tools: } Spring Boot, Angular, PostgreSQL, AWS (EC2, RDS, S3, Secrets Manager), Redis, Docker, GitHub Actions, Jenkins \\
+\textbf{Tools: } Spring Boot, Angular 19, PostgreSQL, Redis, AWS EC2, SSM, Docker, Docker Compose, Nginx, GitHub Actions \\
 \begin{highlights}
-    \item Designed a multi-tenant backend enforcing \textbf{RBAC} across employees, departments, and projects with data isolation and automated AWS deployment.
-    \item Implemented \textbf{REST APIs} for multi-entity services (employees, departments, projects, tasks) with pagination, filtering, and search for fast data retrieval.
+    \item Engineered a multi-tenant \textbf{JWT-based RBAC} backend across 5 entity types with \textbf{AWS Secrets Manager}; deployed on \textbf{EC2} with all services containerized.
+    \item Implemented \textbf{REST APIs} with pagination, filtering, and search; built a reusable \textbf{Angular} table component with sorting and pagination powering list views.
 \end{highlights}
 \vspace{0.2cm}
 
@@ -146,17 +147,17 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
 \textit{Property graph system detecting fraud networks through shared identifiers and multi-hop traversal — where graph databases outperform relational.} \\
 \textbf{Tools: } Neo4j, Java, Cypher, Docker, Maven, Graph Data Science Library \\
 \begin{highlights}
-    \item Built a \textbf{property graph} across 150 accounts and 430 transactions — fraud ring traversal is constant-complexity in \textbf{Cypher} vs exponential SQL joins.
-    \item Documented graph vs relational trade-off in an \textbf{ADR} with side-by-side SQL vs Cypher comparison, making the architectural decision concrete.
+    \item Modeled fraud rings as a \textbf{Neo4j} \textbf{property graph}; 6-hop \textbf{Cypher} traversal detects connected networks at constant complexity vs exponential recursive SQL.
+    \item Implemented composite \textbf{risk scoring} per account using \textbf{GDS}, weighting hop distance from fraud nodes, identifier overlap, and transaction velocity.
 \end{highlights}
 
 \vspace{0.2cm}
 \textbf{Battle Arena – Real-Time Multiplayer Platform} \href{https://github.com/Buffden/battle-arena}{\faGithub} \hfill \textit{May 2025 – Present} \\
 \textit{Real-time multiplayer system featuring a modular game engine, physics-based simulation, and distributed backend services.} \\
-\textbf{Tools: } Angular, Phaser 3, Spring Boot, Node.js, MongoDB, WebSockets, Docker, AWS \\
+\textbf{Tools: } Angular, Phaser 3, Spring Boot, Node.js, MongoDB, Socket.io, Docker, AWS \\
 \begin{highlights}
-    \item Built a distributed multiplayer backend architecture, evaluating polling vs WebSockets and custom protocols for latency, consistency, and scale.
-    \item Architected a \textbf{modular}, terrain-aware \textbf{game engine} with clear separation between \textbf{physics simulation}, \textbf{collision constraints}, and gameplay rules.
+    \item Architected a \textbf{5-service microservices} backend with \textbf{Socket.io} WebSockets for real-time sync, \textbf{Redis} matchmaking queues, and \textbf{Nginx} API gateway.
+    \item Designed a modular game engine with \textbf{Matter.js} physics, \textbf{Phaser 3} rendering, and real-time bi-directional player position sync across active sessions.
 \end{highlights}
 
 \vspace{-0.2cm}
