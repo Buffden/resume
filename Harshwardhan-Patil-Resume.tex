@@ -124,12 +124,18 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
 \textit{Production-grade URL shortening service with QR code generation, link expiry, and a fully automated cloud deployment pipeline.} \\
 \textbf{Tools: } Spring Boot, Angular, PostgreSQL, AWS (EC2, RDS, S3, CloudFront, ALB), Docker, Cloudflare, Lambda, EventBridge, SNS, SQS DLQ, CloudWatch \\
 \begin{highlights}
-    \item Deployed \textbf{distributed architecture} separating SPA (S3 + CloudFront) from REST API (EC2 + ALB) with \textbf{Cloudflare} for DNS, SSL, and DDoS protection.
-    \item Hardened the API layer with \textbf{Nginx-level rate limiting}, applying per-IP controls on URL creation, redirects, and active connections to reduce abuse risk.
-    \item Blocked unsafe traffic before application execution using request-size constraints, security headers (\textbf{HSTS, X-Frame-Options, CSP}), and scanner filters.
-    \item Designed serverless infrastructure scheduler — reducing monthly EC2/RDS costs by ~40\% with full observability and zero operational overhead.
-    \item Built \textbf{REST APIs} for URL shortening with configurable \textbf{TTL-based expiry}, short-code generation, and redirect resolution, backed by \textbf{PostgreSQL on RDS}.
-    \item Implemented a \textbf{CI/CD pipeline} via GitHub Actions to automate production builds, S3 sync, and \textbf{CloudFront cache invalidation} on every push to main.
+    \item Designed \textbf{6-layer request path} across Cloudflare, CloudFront, ALB, Nginx, Spring Boot, and PostgreSQL, separating SPA delivery from API and redirects.
+
+    \item Hardened APIs with \textbf{Nginx rate limits} and \textbf{Bucket4j token buckets}, controlling URL creation, redirects, active connections, and per-IP abuse attempts.
+
+    \item Blocked unsafe traffic pre-app using request-size caps, scanner filters, secure headers (\textbf{HSTS, X-Frame-Options, CSP}), and standard error responses.
+
+    \item Designed serverless EC2/RDS scheduler with Lambda, EventBridge, CloudWatch alarms, SNS, and SQS DLQ, reducing monthly cloud cost by \textbf{\textasciitilde40\%}.
+
+    \item Built URL APIs with \textbf{Base62 sequence codes}, configurable TTL expiry, PostgreSQL persistence, and HTTP-correct \textbf{301/302/410} redirect semantics.
+
+    \item Built zero-SSH \textbf{CI/CD} with GitHub Actions, AWS OIDC, SSM RunCommand, Docker smoke tests, cosign signing, and auto CloudFront cache invalidation.
+
 \end{highlights}
 \vspace{0.2cm}
 
@@ -138,8 +144,11 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
 \textit{Enterprise-grade system for managing employees, teams, projects, and access control with production-grade deployment and observability.} \\
 \textbf{Tools: } Spring Boot, Angular 19, PostgreSQL, Redis, AWS EC2, SSM, Docker, Docker Compose, Nginx, GitHub Actions \\
 \begin{highlights}
-    \item Engineered a multi-tenant \textbf{JWT-based RBAC} backend across 5 entity types with \textbf{AWS Secrets Manager}; deployed on \textbf{EC2} with all services containerized.
-    \item Implemented \textbf{REST APIs} with pagination, filtering, and search; built a reusable \textbf{Angular} table component with sorting and pagination powering list views.
+    \item Engineered a role-aware \textbf{JWT-based RBAC} backend across employees, departments, projects, tasks, and locations with DTO/service/repository layers.
+
+    \item Secured production traffic with \textbf{Cloudflare-proxied DNS}, Nginx gateway routing, SSL/TLS, BCrypt auth, health checks \& containerized EC2 deployment.
+
+    \item Built \textbf{REST APIs} with pagination, filtering, search, and dynamic dashboard metrics; added reusable \textbf{Angular Material} table views with shared components.
 \end{highlights}
 \vspace{0.2cm}
 
@@ -147,17 +156,9 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
 \textit{Property graph system detecting fraud networks through shared identifiers and multi-hop traversal — where graph databases outperform relational.} \\
 \textbf{Tools: } Neo4j, Java, Cypher, Docker, Maven, Graph Data Science Library \\
 \begin{highlights}
-    \item Modeled fraud rings as a \textbf{Neo4j} \textbf{property graph}; 6-hop \textbf{Cypher} traversal detects connected networks at constant complexity vs exponential recursive SQL.
-    \item Implemented composite \textbf{risk scoring} per account using \textbf{GDS}, weighting hop distance from fraud nodes, identifier overlap, and transaction velocity.
-\end{highlights}
+    \item Modeled fraud rings as a \textbf{Neo4j property graph} across 150 accounts and 450 transactions, linking shared phones, emails, devices, and transfers.
 
-\vspace{0.2cm}
-\textbf{Battle Arena – Real-Time Multiplayer Platform} \href{https://github.com/Buffden/battle-arena}{\faGithub} \hfill \textit{May 2025 – Present} \\
-\textit{Real-time multiplayer system featuring a modular game engine, physics-based simulation, and distributed backend services.} \\
-\textbf{Tools: } Angular, Phaser 3, Spring Boot, Node.js, MongoDB, Socket.io, Docker, AWS \\
-\begin{highlights}
-    \item Architected a \textbf{5-service microservices} backend with \textbf{Socket.io} WebSockets for real-time sync, \textbf{Redis} matchmaking queues, and \textbf{Nginx} API gateway.
-    \item Designed a modular game engine with \textbf{Matter.js} physics, \textbf{Phaser 3} rendering, and real-time bi-directional player position sync across active sessions.
+    \item Wrote 6-hop \textbf{Cypher} traversal and composite risk-scoring queries using fraud proximity, shared identifiers, and transaction velocity to high-risk accounts.
 \end{highlights}
 
 \vspace{-0.2cm}
