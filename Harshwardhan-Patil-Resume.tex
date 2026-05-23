@@ -144,8 +144,11 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
 \textit{Enterprise-grade system for managing employees, teams, projects, and access control with production-grade deployment and observability.} \\
 \textbf{Tools: } Spring Boot, Angular 19, PostgreSQL, Redis, AWS EC2, SSM, Docker, Docker Compose, Nginx, GitHub Actions \\
 \begin{highlights}
-    \item Engineered a multi-tenant \textbf{JWT-based RBAC} backend across 5 entity types with \textbf{AWS Secrets Manager}; deployed on \textbf{EC2} with all services containerized.
-    \item Implemented \textbf{REST APIs} with pagination, filtering, and search; built a reusable \textbf{Angular} table component with sorting and pagination powering list views.
+    \item Engineered a role-aware \textbf{JWT-based RBAC} backend across employees, departments, projects, tasks, and locations with DTO/service/repository layers.
+
+    \item Secured production traffic with \textbf{Cloudflare-proxied DNS}, Nginx gateway routing, SSL/TLS, BCrypt auth, health checks \& containerized EC2 deployment.
+
+    \item Built \textbf{REST APIs} with pagination, filtering, search, and dynamic dashboard metrics; added reusable \textbf{Angular Material} table views with shared components.
 \end{highlights}
 \vspace{0.2cm}
 
@@ -153,8 +156,9 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
 \textit{Property graph system detecting fraud networks through shared identifiers and multi-hop traversal — where graph databases outperform relational.} \\
 \textbf{Tools: } Neo4j, Java, Cypher, Docker, Maven, Graph Data Science Library \\
 \begin{highlights}
-    \item Modeled fraud rings as a \textbf{Neo4j} \textbf{property graph}; 6-hop \textbf{Cypher} traversal detects connected networks at constant complexity vs exponential recursive SQL.
-    \item Implemented composite \textbf{risk scoring} per account using \textbf{GDS}, weighting hop distance from fraud nodes, identifier overlap, and transaction velocity.
+    \item Modeled fraud rings as a \textbf{Neo4j property graph} across 150 accounts and 450 transactions, linking shared phones, emails, devices, and transfers.
+
+    \item Wrote 6-hop \textbf{Cypher} traversal and composite risk-scoring queries using fraud proximity, shared identifiers, and transaction velocity to high-risk accounts.
 \end{highlights}
 
 \vspace{-0.2cm}
