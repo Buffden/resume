@@ -3,7 +3,7 @@
 % --- Packages ---
 \usepackage[
     ignoreheadfoot,
-    top=1.2cm,
+    top=0.7cm,
     bottom=0.7cm,
     left=0.7cm,
     right=0.7cm,
@@ -63,32 +63,29 @@
 \end{center}
 
 {\small
-\vspace{-0.2cm}
+\vspace{-0.5cm}
 % --- Overview ---
 \section{Overview}
-Full-Stack Engineer with \textbf{3+ years of experience} building scalable, distributed systems and high-performance APIs across frontend, backend, and cloud environments. Skilled in \textbf{system design}, CI/CD on AWS, production monitoring, and delivering \textbf{fault-tolerant, data-consistent services} at scale.
+Full-Stack Engineer with \textbf{5+ years of experience} building scalable, distributed systems and high-performance APIs across frontend, backend, and cloud environments. Skilled in \textbf{system design}, CI/CD on AWS, production monitoring, and delivering \textbf{fault-tolerant, data-consistent services} at scale.
 
-
-
-
-
+\vspace{-0.2cm}
 % --- Technical Skills ---
 \section{Technical Skills}
 \begin{onecolentry}
    \item \textbf{Languages \& Frameworks:} Java, TypeScript, JavaScript, SQL, Spring Boot, Angular, Node.js
-\item \textbf{Cloud \& DevOps:} AWS (EC2, ECS, S3, RDS, CloudFront, ALB, Secrets Manager, Lambda), Docker, Jenkins, GitHub Actions, Nginx, Cloudflare, CI/CD
-\item \textbf{Databases:} PostgreSQL, Redis, MySQL, Neo4j, Elasticsearch, MongoDB, Schema design, Database indexing, Query optimization, Caching strategies
-\item \textbf{Testing \& Security:} JUnit, Mockito, Jasmine, SonarQube, Postman, JWT, RBAC, HTTPS/TLS, CORS, CSRF/XSS protection
-\item \textbf{Design \& Architecture:} System Design, Design Patterns, SOLID principles, Distributed backend services, Concurrency handling, Session management
+   \item \textbf{Cloud \& DevOps:} AWS (EC2, ECS, S3, RDS, CloudFront, ALB, Secrets Manager, Lambda), Docker, Jenkins, GitHub Actions, Nginx, Cloudflare, CI/CD
+    \item \textbf{Databases:} PostgreSQL, Redis, MySQL, Neo4j, Elasticsearch, MongoDB, Schema design, Database indexing, Query optimization, Caching strategies
+    \item \textbf{Testing \& Security:} JUnit, Mockito, Jasmine, Vitest, ESLint, SonarQube, Postman, JWT, RBAC, HTTPS/TLS, CORS, CSRF/XSS protection
+    \item \textbf{Design \& Architecture:} System Design, Design Patterns, SOLID principles, Distributed backend services, Concurrency handling, Session management
 
 \end{onecolentry}
 
 
-
+\vspace{-0.2cm}
 % --- Professional Experience ---
 \section{Professional Experience}
 
-\textbf{Software Engineer, Clarivate Analytics} -- Bangalore, India \hfill \textit{Aug 2023 -- Jul 2024} \\
+\textbf{Software Engineer, Clarivate Analytics} -- Bangalore, India \hfill \textit{Aug 2023 - Jul 2024} \\
 \begin{highlights}
     \item Developed scalable Spring Boot REST APIs with DTO contracts and standardized error handling, reducing breaking changes by \textbf{30\%} across releases.
     \item Implemented \textbf{JWT}-based multi-session management across backend services, capping concurrent logins at 12 per user with token invalidation on breach.
@@ -102,7 +99,7 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
 \end{highlights}
 
 \vspace{0.2cm}
-\textbf{Associate Software Engineer, Clarivate Analytics} -- Bangalore, India \hfill \textit{Aug 2021 -- Jul 2023} \\
+\textbf{Associate Software Engineer, Clarivate Analytics} -- Bangalore, India \hfill \textit{Aug 2021 - Jul 2023} \\
 \begin{highlights}
     \item Integrated \textbf{Elasticsearch} into Spring Boot, enabling advanced full-text queries across \textbf{millions of drug records} and reducing search latency by \textbf{30\%}.
     \item Migrated \textbf{5+ core business flows} from Angular 8 to \textbf{Angular 13}, rebuilding components with a modular architecture and improved state management.
@@ -113,26 +110,24 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
     \item Architected a configurable \textbf{Angular} table framework with sorting, pagination, and filters; adopted across \textbf{3 internal teams}, cutting duplication by \textbf{50\%}.
 \end{highlights}
 
+\vspace{-0.2cm}
 % --- Education ---
 \section{Education}
-\textbf{University of Texas at Arlington}\hspace{3.3em}\textit{Master's in Software Engineering}\hspace{3.3em}\textit{GPA: 3.6 / 4.0} \hfill \textit{May 2026} \\
+\textbf{University of Texas at Arlington}\hspace{3.3em}\textit{Master's in Software Engineering}\hspace{3.3em}\textit{GPA: 3.6 / 4.0} \hfill \textit{Aug 2024 - May 2026} \\
 
+\vspace{-0.2cm}
 % --- Projects ---
 \section{Projects}
 
-\textbf{TinyURL — URL Shortener} \href{https://github.com/Buffden/tinyurl-api}{\faGithub}\hspace{0.4em}\href{https://tinyurl.buffden.com/}{\faGlobe} \hfill \textit{Feb 2026 – Mar 2026} \\
+\textbf{TinyURL — URL Shortener} \hspace{1em}\href{https://github.com/Buffden/tinyurl-api}{\faGithub}\hspace{0.6em}\href{https://tinyurl.buffden.com/}{\faLink} \hfill \textit{Feb 2026 - Mar 2026} \\
 \textit{Production-grade URL shortening service with QR code generation, link expiry, and a fully automated cloud deployment pipeline.} \\
 \textbf{Tools: } Spring Boot, Angular, PostgreSQL, AWS (EC2, RDS, S3, CloudFront, ALB), Docker, Cloudflare, Lambda, EventBridge, SNS, SQS DLQ, CloudWatch \\
 \begin{highlights}
     \item Designed \textbf{6-layer request path} across Cloudflare, CloudFront, ALB, Nginx, Spring Boot, and PostgreSQL, separating SPA delivery from API and redirects.
 
-    \item Hardened APIs with \textbf{Nginx rate limits} and \textbf{Bucket4j token buckets}, controlling URL creation, redirects, active connections, and per-IP abuse attempts.
-
-    \item Blocked unsafe traffic pre-app using request-size caps, scanner filters, secure headers (\textbf{HSTS, X-Frame-Options, CSP}), and standard error responses.
+    \item Hardened API traffic with \textbf{Nginx rate limits}, \textbf{Bucket4j token buckets}, \textbf{layer-7} bot/scanner filters, per-IP size caps, and strict \textbf{HSTS/CSP} secure headers.
 
     \item Designed serverless EC2/RDS scheduler with Lambda, EventBridge, CloudWatch alarms, SNS, and SQS DLQ, reducing monthly cloud cost by \textbf{\textasciitilde40\%}.
-
-    \item Built URL APIs with \textbf{Base62 sequence codes}, configurable TTL expiry, PostgreSQL persistence, and HTTP-correct \textbf{301/302/410} redirect semantics.
 
     \item Built zero-SSH \textbf{CI/CD} with GitHub Actions, AWS OIDC, SSM RunCommand, Docker smoke tests, cosign signing, and auto CloudFront cache invalidation.
 
@@ -140,7 +135,20 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
 \vspace{0.2cm}
 
 
-\textbf{Employee Management System} \href{https://github.com/Buffden/employee-management-system}{\faGithub}\hspace{0.4em}\href{https://ems.buffden.com/}{\faGlobe} \hfill \textit{Dec 2024 – May 2025} \\
+\textbf{diagram-sync — Diagram-as-Code CLI} \hspace{1em}\href{https://github.com/Buffden/diagram-sync}{\faGithub}\hspace{0.6em}\href{https://www.npmjs.com/package/diagram-sync}{\faLink} \hfill \textit{May 2026 - Present} \\
+\textit{Published npm package that renders architecture diagrams from 7 source formats into versioned SVG/PNG outputs — \texttt{npx diagram-sync}.} \\
+\textbf{Tools: } TypeScript, Node.js, Vitest, ESLint, GitHub Actions, PlantUML, Mermaid, Graphviz, Draw.io, D2, Excalidraw, BPMN \\
+\begin{highlights}
+    \item Engineered \textbf{provider-registry architecture} mapping 14+ file extensions to isolated rendering adapters with runtime graceful degradation on missing tools.
+
+    \item Developed recursive repo scan, \texttt{--files}, and \texttt{--changed} via \texttt{git diff HEAD} with untracked support, enabling CI to regenerate only PR-changed files.
+
+    \item Architected \textbf{tiered format resolution} across CLI flag, job, and global config with per-provider validation and actionable errors for unsupported formats.
+
+\end{highlights}
+\vspace{0.2cm}
+
+\textbf{Employee Management System} \hspace{1em}\href{https://github.com/Buffden/employee-management-system}{\faGithub}\hspace{0.6em}\href{https://ems.buffden.com/}{\faLink} \hfill \textit{Dec 2024 - May 2025} \\
 \textit{Enterprise-grade system for managing employees, teams, projects, and access control with production-grade deployment and observability.} \\
 \textbf{Tools: } Spring Boot, Angular 19, PostgreSQL, Redis, AWS EC2, SSM, Docker, Docker Compose, Nginx, GitHub Actions \\
 \begin{highlights}
@@ -152,13 +160,13 @@ Full-Stack Engineer with \textbf{3+ years of experience} building scalable, dist
 \end{highlights}
 \vspace{0.2cm}
 
-\textbf{RingNet — Graph-Based Fraud Ring Detection} \href{https://github.com/Buffden/ringnet}{\faGithub} \hfill \textit{Apr 2026 - Present} \\
+\textbf{RingNet — Graph-Based Fraud Ring Detection} \hspace{1em}\href{https://github.com/Buffden/ringnet}{\faGithub} \hfill \textit{Apr 2026 - Present} \\
 \textit{Property graph system detecting fraud networks through shared identifiers and multi-hop traversal — where graph databases outperform relational.} \\
 \textbf{Tools: } Neo4j, Java, Cypher, Docker, Maven, Graph Data Science Library \\
 \begin{highlights}
     \item Modeled fraud rings as a \textbf{Neo4j property graph} across 150 accounts and 450 transactions, linking shared phones, emails, devices, and transfers.
 
-    \item Wrote 6-hop \textbf{Cypher} traversal and composite risk-scoring queries using fraud proximity, shared identifiers, and transaction velocity to high-risk accounts.
+    \item Designed 6-hop \textbf{Cypher} traversal and risk-scoring queries using fraud proximity, shared identifiers, and transaction velocity to flag high-risk accounts.
 \end{highlights}
 
 
