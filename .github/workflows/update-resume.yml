@@ -27,7 +27,7 @@ jobs:
             echo "Failed to fetch download count, aborting"
             exit 1
           fi
-          echo "count=$(python3 -c "print(f'{$DOWNLOADS:,}')")" >> $GITHUB_OUTPUT
+          echo "count=$(python3 -c "print(f'{int(\"$DOWNLOADS\"):,}')")" >> $GITHUB_OUTPUT
 
       - name: Inject count into tex
         env:
@@ -49,10 +49,18 @@ jobs:
           print(f"Updated download count to {count}")
           EOF
 
+      - name: Install LaTeX dependencies
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y --no-install-recommends \
+            texlive-latex-base \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra
+
       - name: Compile LaTeX
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: ${{ env.TEX_FILE }}
+        run: pdflatex -interaction=nonstopmode ${{ env.TEX_FILE }}
 
       - name: Commit tex and PDF
         run: |
