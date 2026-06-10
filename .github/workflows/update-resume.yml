@@ -1,0 +1,63 @@
+name: Update Resume & Compile
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+    - cron: '0 18 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      TEX_FILE: Harshwardhan-Patil-Resume.tex
+      NPM_PACKAGE: diagram-sync
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch npm download count
+        id: npm
+        run: |
+          RESPONSE=$(curl -s "https://api.npmjs.org/downloads/point/2020-01-01:$(date +%Y-%m-%d)/${{ env.NPM_PACKAGE }}")
+          DOWNLOADS=$(echo "$RESPONSE" | jq -r '.downloads // empty')
+          if [ -z "$DOWNLOADS" ]; then
+            echo "Failed to fetch download count, aborting"
+            exit 1
+          fi
+          echo "count=$(python3 -c "print(f'{$DOWNLOADS:,}')")" >> $GITHUB_OUTPUT
+
+      - name: Inject count into tex
+        env:
+          COUNT: ${{ steps.npm.outputs.count }}
+        run: |
+          python3 << 'EOF'
+          import re, os
+          count = os.environ['COUNT']
+          tex = os.environ['TEX_FILE']
+          with open(tex, 'r') as f:
+              content = f.read()
+          updated = re.sub(
+              r'(\\faDownload\\hspace\{0\.3em\})[\d,]+',
+              lambda m: m.group(1) + count,
+              content
+          )
+          with open(tex, 'w') as f:
+              f.write(updated)
+          print(f"Updated download count to {count}")
+          EOF
+
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: ${{ env.TEX_FILE }}
+
+      - name: Commit tex and PDF
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "${{ env.TEX_FILE }}" "${TEX_FILE%.tex}.pdf"
+          git diff --cached --quiet || git commit -m "chore: update npm download count to ${{ steps.npm.outputs.count }}"
+          git push
