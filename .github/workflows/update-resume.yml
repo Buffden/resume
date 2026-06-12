@@ -23,13 +23,32 @@ jobs:
         run: |
           RESPONSE=$(curl -s "https://api.npmjs.org/downloads/point/2020-01-01:$(date +%Y-%m-%d)/${{ env.NPM_PACKAGE }}")
           DOWNLOADS=$(echo "$RESPONSE" | jq -r '.downloads // empty')
-          if [ -z "$DOWNLOADS" ]; then
-            echo "Failed to fetch download count, aborting"
+          if [ -z "$DOWNLOADS" ] || ! [[ "$DOWNLOADS" =~ ^[1-9][0-9]*$ ]]; then
+            echo "Invalid download count: '$DOWNLOADS', aborting"
             exit 1
           fi
           echo "count=$(python3 -c "print(f'{int(\"$DOWNLOADS\"):,}')")" >> $GITHUB_OUTPUT
 
+      - name: Check if count changed
+        id: check
+        env:
+          COUNT: ${{ steps.npm.outputs.count }}
+        run: |
+          CURRENT=$(grep -oP '(?<=\\newcommand\{\\npmDownloads\}\{)[\d,]+(?=\})' "${{ env.TEX_FILE }}" || echo "")
+          if [ -z "$CURRENT" ]; then
+            echo "Could not find \\npmDownloads in ${{ env.TEX_FILE }}, aborting"
+            exit 1
+          fi
+          if [ "$CURRENT" = "$COUNT" ]; then
+            echo "No change ($COUNT), skipping."
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changed: $CURRENT → $COUNT"
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
       - name: Inject count into tex
+        if: steps.check.outputs.changed == 'true'
         env:
           COUNT: ${{ steps.npm.outputs.count }}
         run: |
@@ -40,8 +59,8 @@ jobs:
           with open(tex, 'r') as f:
               content = f.read()
           updated = re.sub(
-              r'(\\faDownload\\hspace\{0\.3em\})[\d,]+',
-              lambda m: m.group(1) + count,
+              r'(\\newcommand\{\\npmDownloads\}\{)[\d,]+(\})',
+              lambda m: m.group(1) + count + m.group(2),
               content
           )
           with open(tex, 'w') as f:
@@ -50,6 +69,7 @@ jobs:
           EOF
 
       - name: Install LaTeX dependencies
+        if: steps.check.outputs.changed == 'true'
         run: |
           sudo apt-get update -q
           sudo apt-get install -y --no-install-recommends \
@@ -60,12 +80,13 @@ jobs:
             texlive-fonts-extra
 
       - name: Compile LaTeX
+        if: steps.check.outputs.changed == 'true'
         run: pdflatex -interaction=nonstopmode ${{ env.TEX_FILE }}
 
       - name: Commit tex and PDF
+        if: steps.check.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add "${{ env.TEX_FILE }}" "${TEX_FILE%.tex}.pdf"
-          git diff --cached --quiet || git commit -m "chore: update npm download count to ${{ steps.npm.outputs.count }}"
-          git push
+          git diff --cached --quiet || (git commit -m "chore: update npm download count to ${{ steps.npm.outputs.count }}" && git push)
