@@ -171,13 +171,13 @@ Full-Stack Engineer with \textbf{5+ years of experience} building scalable, dist
 \end{highlights}
 \vspace{0.1cm}
 
-\textbf{AI Text Intelligence Dashboard} \hspace{1em}\href{https://github.com/Buffden/ai-text-intelligence-dashboard}{\faGithub} \hfill \textit{May 2026 - Present} \\
-\textit{Technical study of LLM integration with Spring AI, exploring prompt engineering patterns, streaming architecture, and model configuration.} \\
-\textbf{Tools: } Spring AI, OpenAI API (gpt-4o), Spring Boot 3.5, Java 21, Angular 19, TypeScript, SSE, RxJS \\
+\textbf{RAG Document Engine} \hspace{1em}\href{https://github.com/Buffden/rag-document-engine}{\faGithub} \hfill \textit{Jun 2026 - Present} \\
+\textit{End-to-end RAG system with multi-format ingestion, hybrid retrieval, LLM answer generation, and role-based document access control.} \\
+\textbf{Tools: } Python, NumPy, OpenAI API, ChromaDB, sentence-transformers \\
 \begin{highlights}
-    \item Experimented with JSON-enforcing system prompts, few-shot classification, chain-of-thought scratchpad, and input delimiters for injection hardening.
-    \item Built \textbf{SSE streaming} via Spring AI \texttt{Flux} + \texttt{SseEmitter} consumed as Fetch \texttt{ReadableStream} in \textbf{RxJS}; built stateful chat using \textbf{ConcurrentHashMap}.
-    \item Tuned \textbf{LLM config} in YAML: model selection, retry count, backoff delay, HTTP timeouts; applied full-jitter exponential backoff and \texttt{Retry-After} on 429s.
+    \item Built \textbf{multi-format ingestion} (PDF, Word, Markdown) with overlapping chunking, deduplication, and \textbf{1536-dim} L2-normalized embeddings into ChromaDB.
+    \item Engineered \textbf{hybrid retrieval} via ensemble sparse BM25 + cross-encoder reranking with \textbf{tiktoken} token budgeting for citation-grounded LLM generation.
+    \item Implemented \textbf{multi-turn chat} with history truncation and \textbf{RBAC-scoped metadata filtering} in ChromaDB enforcing per-user document access at retrieval.
 \end{highlights}
 
 } % end small text group
