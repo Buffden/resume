@@ -89,4 +89,4 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add "${{ env.TEX_FILE }}" "${TEX_FILE%.tex}.pdf"
-          git diff --cached --quiet || (git commit -m "chore: update npm download count to ${{ steps.npm.outputs.count }}" && git push)
+          git diff --cached --quiet || (git commit -m "chore: update npm download count to ${{ steps.npm.outputs.count }}" && git pull --rebase && git push)
