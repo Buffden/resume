@@ -185,4 +185,5 @@ file.bib
 # Presentation files
 *.ppt
 *.pptx
-*.odp 
+*.odp
+.claude/
