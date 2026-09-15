@@ -1,0 +1,3 @@
+[submodule "tools/hiring-agent"]
+	path = tools/hiring-agent
+	url = https://github.com/interviewstreet/hiring-agent.git
